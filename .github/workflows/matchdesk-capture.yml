@@ -1,0 +1,52 @@
+name: Match desk capture
+
+# The authoring sandbox reaches GitHub only, so every first-hand public read is taken on a
+# GitHub-hosted runner and committed back to the branch that asked for it.  A failed read is
+# evidence too: it is written to the manifest with its status and published on the desk's
+# review page rather than failing the job.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/matchdesk/requests.json"
+      - "scripts/matchdesk_collect.py"
+      - ".github/workflows/matchdesk-capture.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: matchdesk-capture-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Capture OLBG listings and official feeds
+        run: python scripts/matchdesk_collect.py 2>&1 | tee /tmp/capture.log
+
+      - name: Commit the captures back to this branch
+        run: |
+          git config user.name "matchdesk-capture"
+          git config user.email "matchdesk-capture@users.noreply.github.com"
+          git add data/matchdesk
+          if git diff --cached --quiet; then
+            echo "no capture changes"
+            exit 0
+          fi
+          git commit -m "matchdesk: first-hand capture $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            sleep 5
+          done

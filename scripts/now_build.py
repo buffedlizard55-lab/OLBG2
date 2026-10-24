@@ -522,8 +522,10 @@ with filler. Where OLBG does not list an event, the row says so instead of imply
 <p class="eyebrow">Picks</p>
 <h1>Every selection, graded</h1>
 <p class="lede">One row per match: the selection in green, the market, the chance we give it and the price that chance
-implies. {picks['pregame_count']} picks are for matches that had not started when this snapshot was taken; the
-{picks['started_count']} below them had, so they are kept for the record and are not offered as pre-match calls.</p>
+implies. {picks['pregame_count']} picks are for matches that had not started when this snapshot was taken: the
+{len(pregame_hm)} below are offered, and {len(ls)} more are priced but not backed because our own number is too close
+to a coin flip. A further {picks['started_count']} matches had already started, so they are kept for the record and are
+not offered as pre-match calls.</p>
 
 <h2>Available now — {len(pregame_hm)} picks on matches still to start</h2>
 <p class="sub">High confidence first, then medium. A dash of confidence still means what it says: high needs a 62%

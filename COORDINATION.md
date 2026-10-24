@@ -5673,3 +5673,48 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
+
+## SESSION `arena/3ef9031e-olbg2` — 2026-10-24 22:35 UTC — `/playbook/` fresh 15-sport pick desk
+
+**Concurrency scan at claim time.** `git branch -r` returns only `origin/main` (tip `67e7672`, merge of PR #219/`/meridian/`).
+No other session branch is live, so every earlier claim in this file is older than 60 minutes with no commits and is
+stale under the handoff rule above. This session therefore takes over the shared root front door and logs the handoff
+here. Nothing another session left uncommitted is touched.
+
+**Problem being fixed (owner's words):** the site is too confusing to tell what the matches are or where the picks are.
+The requirement is a clean, obvious desk: executive summary first, then 5–10 labelled picks per sport across the exact
+15 sports, every match with our own originated lines, every row carrying an official source link, unconfirmable values
+left blank and flagged.
+
+**Exclusive, non-overlapping file scope for `arena/3ef9031e-olbg2`:**
+
+- `playbook/**` — the new desk (`index.html`, `picks.html`, `predictions.html`, `matches.html`, `lines.html`,
+  `sports/index.html`, 15 × `sports/<slug>.html`, `sources.html`, `flagged.html`, `methodology.html`, `assets/`).
+- `data/playbook/**` — first-hand 2026-10-24 OLBG listing capture, official fixture/stat capture with per-fact URLs,
+  originated multi-market lines, confidence grades, band test, written predictions, verification log, flags.
+- `scripts/playbook_*.py` — seed, model, predictions, build, verify.
+- `tests/test_playbook_3ef9031e.py`, `research/playbook-3ef9031e.md`.
+- **Shared root, taken over:** `scripts/build_site.py` `build_index()` only (root `index.html` becomes a clean front
+  door that opens with this desk's executive summary and points at `/playbook/`); `archive.html` generator (every
+  earlier layer stays listed and reachable); `tests/**` assertions that pin root-page content (updated to the new front
+  door with the old layer's link preserved through `archive.html`); `README.md`; `.github/workflows/pages.yml`
+  (append-only `playbook_*` rebuild step + drift paths); this file (append-only).
+- **Not touched by hand:** `now/**`, `meridian/**`, `clarity/**`, `today/**`, `cadence/**`, `live-desk/**` and every
+  other published layer. Two cross-scope files are *regenerated with their owners' own unmodified scripts* at the end
+  (`scripts/clarity_audit.py`/`clarity_build.py`, `scripts/ledger_report.py`/`ledger_build.py`,
+  `scripts/meridian_audit.py`/`meridian_build.py`) because they count published layers from the tree.
+
+| # | Task | Status | Owner |
+|---|---|---|---|
+| PB1 | Claim + concurrency scan | done | `arena/3ef9031e-olbg2` |
+| PB2 | Fresh OLBG hub capture for the 16 hubs covering the exact 15 sports | in progress | `arena/3ef9031e-olbg2` |
+| PB3 | First-hand official-source capture (fixtures, form, season stats, injuries) with per-fact URLs | in progress | `arena/3ef9031e-olbg2` |
+| PB4 | Originated lines on every market (match winner, handicap/spread/puck line, match total) + low/medium/high grades + −250…+10000 band test | in progress | `arena/3ef9031e-olbg2` |
+| PB5 | 5–10 labelled picks per sport; ≥30-word unique written predictions, five per sport where official evidence allows | in progress | `arena/3ef9031e-olbg2` |
+| PB6 | Clean `/playbook/` desk, clean root front door, line-by-line verifier, tests | in progress | `arena/3ef9031e-olbg2` |
+| PB7 | PR → `main`, merge, confirm Pages deploy, record result here | in progress | `arena/3ef9031e-olbg2` |
+
+**Known pre-existing failure at claim time (not caused by this session).** `python -m unittest discover -s tests`
+is 850 tests with 2 failures, both in `tests/test_meridian_1286444e.py`: `meridian_verify.py` reports
+"repo audit is implausibly short" and the published repo-audit count is 3 where the test wants ≥ 4. `/meridian/` counts
+top-level layers, which moved when later layers merged. Logged for repair with meridian's own scripts at integration.

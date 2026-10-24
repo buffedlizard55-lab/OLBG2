@@ -2,14 +2,14 @@
  "meta": {
   "generated_at": "2026-10-23T20:36:17Z",
   "findings": 6,
-  "layers": 43
+  "layers": 44
  },
  "findings": [
   {
    "code": "RR-02",
    "title": "Thirty-three published dashboards overlap the same brief",
    "detail": "Each of these directories publishes a full dashboard for the same 15-sport brief, with different counts and different levels of evidence. There is no marker of which one is authoritative, so a reader landing on any of them can be misled.",
-   "evidence": "43 directories with an index.html: atlas, audit65, beacon, board, brief, cadence, canon, command, covered, current, daily, daily-audit, daily-picks, desk, evidence, final, final-desk, focus, forward, fresh, horizon, hub, ledger, live, liveboard, master, monitor, olbg, portal, pulse, quest, reconcile, relay, signal, site, slate, sports, summit, survey, update, vanguard, verified, zenith",
+   "evidence": "44 directories with an index.html: atlas, audit65, beacon, board, brief, cadence, canon, command, covered, current, daily, daily-audit, daily-picks, desk, evidence, final, final-desk, focus, forward, fresh, horizon, hub, ledger, live, live-desk, liveboard, master, monitor, olbg, portal, pulse, quest, reconcile, relay, signal, site, slate, sports, summit, survey, update, vanguard, verified, zenith",
    "severity": "high"
   },
   {

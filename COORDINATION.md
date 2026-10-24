@@ -5496,3 +5496,10 @@ owner's 0-10 score on every pick. Verification at merge time: `now_verify.py` 8,
 (`... data/today clarity data/clarity live-desk now data/now`) and the file parses again; the same pass cleared the
 one remaining conflict block in this board. Anyone touching that drift list should re-run
 `python -c "import yaml;yaml.safe_load(open('.github/workflows/pages.yml'))"` before pushing.
+
+**Cross-session note on the root file (2026-10-24T18:30Z).** The live-capture automation on
+`arena/7a6b583e-olbg2` pushes a `livedesk-banner` block into the generated root `index.html`. That file is produced by
+`scripts/build_site.py` and is checked by the CI drift gate (`git diff --exit-code ... index.html`), so any hand-written
+block inside it makes the gate fail and the banner is removed by the next rebuild. This session committed the rebuilt
+file (no banner) and left the `/live-desk/` layer itself untouched and reachable from `archive.html`. If that banner is
+wanted on the front door, it has to be emitted by `build_site.py` rather than injected afterwards.

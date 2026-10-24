@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repository review · OLBG2 /meridian/</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="index.html">OLBG2 <span>/meridian/ · 24 Oct 2026 snapshot</span></a>
+<nav class="main"><a href="index.html">Executive summary</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="band.html">Odds band</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="olbg.html">OLBG</a><a href="repo-review.html" class="on">Repo review</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Repository review</h1>
+<p class="lede">The repo audited with the same standard as the data.</p>
+
+<p class="lede">A line-by-line scan of the checkout this desk was built into, produced by a script so it can
+be re-run. 4 findings across 47 published dashboards.</p>
+<div class="notice info"><strong>Scope.</strong> This session owns only <code>/meridian/</code>,
+<code>data/meridian/</code>, <code>scripts/meridian_*.py</code>, one test module, one research note and
+append-only edits to COORDINATION.md. Every finding below is in another session's files and is reported,
+not edited.</div>
+<div class="card" style="margin:12px 0"><h3>MF-01 · 95 published prediction texts elsewhere in the repo use banned vocabulary</h3>
+<p class="small"><span class="badge high">high</span></p>
+<p>The reader-facing predictions in other data layers still contain the words the brief bans (&#x27;model&#x27;, &#x27;verified&#x27;). This session does not edit those files because they belong to other sessions; the files and line numbers are listed so the owning sessions can fix them.</p>
+<details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">[
+ {
+  &quot;file&quot;: &quot;data/atlas/predictions.json&quot;,
+  &quot;entries&quot;: 29,
+  &quot;total&quot;: 41,
+  &quot;first_line&quot;: 34
+ },
+ {
+  &quot;file&quot;: &quot;data/board/predictions.json&quot;,
+  &quot;entries&quot;: 2,
+  &quot;total&quot;: 35,
+  &quot;first_line&quot;: 543
+ },
+ {
+  &quot;file&quot;: &quot;data/daily/predictions.json&quot;,
+  &quot;entries&quot;: 24,
+  &quot;total&quot;: 45,
+  &quot;first_line&quot;: 84
+ },
+ {
+  &quot;file&quot;: &quot;data/daily-audit/predictions.json&quot;,
+  &quot;entries&quot;: 1,
+  &quot;total&quot;: 5,
+  &quot;first_line&quot;: 186
+ },
+ {
+  &quot;file&quot;: &quot;data/final/predictions.json&quot;,
+  &quot;entries&quot;: 17,
+  &quot;total&quot;: 19,
+  &quot;first_line&quot;: 24
+ },
+ {
+  &quot;file&quot;: &quot;data/forward/predictions.json&quot;,
+  &quot;entries&quot;: 4,
+  &quot;total&quot;: 8,
+  &quot;first_line&quot;: 89
+ },
+ {
+  &quot;file&quot;: &quot;data/hub/predictions.json&quot;,
+  &quot;entries&quot;: 1,
+  &quot;total&quot;: 25,
+  &quot;first_line&quot;: 664
+ },
+ {
+  &quot;file&quot;: &quot;data/predictions.json&quot;,
+  &quot;entries&quot;: 6,
+  &quot;total&quot;: 6,
+  &quot;first_line&quot;: 13
+ },
+ {
+  &quot;file&quot;: &quot;data/predictions_archived.json&quot;,
+  &quot;entries&quot;: 3,
+  &quot;total&quot;: 3,
+  &quot;first_line&quot;: 12
+ },
+ {
+  &quot;file&quot;: &quot;data/relay/predictions.json&quot;,
+  &quot;entries&quot;: 4,
+  &quot;total&quot;: 20,
+  &quot;first_line&quot;: 55
+ },
+ {
+  &quot;file&quot;: &quot;data/vanguard/predictions.json&quot;,
+  &quot;entries&quot;: 2,
+  &quot;total&quot;: 21,
+  &quot;first_line&quot;: 244
+ },
+ {
+  &quot;file&quot;: &quot;data/verified/predictions.json&quot;,
+  &quot;entries&quot;: 2,
+  &quot;total&quot;: 14,
+  &quot;first_line&quot;: 21
+ }
+]</pre></details>
+<p class="small"><strong>Action:</strong> Left untouched by this session; listed for the owning sessions.</p></div><div class="card" style="margin:12px 0"><h3>MF-02 · Data files outside the exact-15-sport list carry Aussie Rules and eSports rows</h3>
+<p class="small"><span class="badge high">high</span></p>
+<p>Layers outside this desk publish rows for sports that are not in the brief&#x27;s list of fifteen, so the claim and the data disagree on the same branch.</p>
+<details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">[
+ {
+  &quot;file&quot;: &quot;data/atlas/capture_atp.json&quot;,
+  &quot;sports&quot;: [
+   &quot;None&quot;
+  ],
+  &quot;rows&quot;: 11
+ },
+ {
+  &quot;file&quot;: &quot;data/atlas/matches.json&quot;,
+  &quot;sports&quot;: [
+   &quot;baseball&quot;,
+   &quot;basketball&quot;,
+   &quot;cricket&quot;,
+   &quot;darts&quot;,
+   &quot;gaelic-football&quot;,
+   &quot;golf&quot;,
+   &quot;greyhounds&quot;,
+   &quot;handball&quot;,
+   &quot;ice-hockey&quot;,
+   &quot;motor-racing&quot;,
+   &quot;rugby-league&quot;,
+   &quot;rugby-union&quot;,
+   &quot;snooker&quot;,
+   &quot;tennis&quot;,
+   &quot;volleyball&quot;
+  ],
+  &quot;rows&quot;: 300
+ },
+ {
+  &quot;file&quot;: &quot;data/atlas/predictions.json&quot;,
+  &quot;sports&quot;: [
+   &quot;baseball&quot;,
+   &quot;ice-hockey&quot;
+  ],
+  &quot;rows&quot;: 41
+ },
+ {
+  &quot;file&quot;: &quot;data/beacon/matches.json&quot;,
+  &quot;sports&quot;: [
+   &quot;baseball&quot;,
+   &quot;basketball&quot;,
+   &quot;cricket&quot;,
+   &quot;darts&quot;,
+   &quot;gaelic-football&quot;,
+   &quot;golf&quot;,
+   &quot;greyhounds&quot;,
+   &quot;handball&quot;,
+   &quot;ice-hockey&quot;,
+   &quot;motor-racing&quot;,
+   &quot;rugby-league&quot;,
+   &quot;rugby-union&quot;,
+   &quot;snooker&quot;,
+   &quot;tennis&quot;,
+   &quot;volleyball&quot;
+  ],
+  &quot;rows&quot;: 209
+ },
+ {
+  &quot;file&quot;: &quot;data/beacon/predictions.json&quot;,
+  &quot;sports&quot;: [
+   &quot;basketball&quot;,
+   &quot;cricket&quot;,
+   &quot;darts&quot;,
+   &quot;gaelic-football&quot;,
+   &quot;handball&quot;,
+   &quot;rugby-league&quot;,
+   &quot;rugby-union&quot;,
+   &quot;tennis&quot;,
+   &quot;volleyball&quot;
+  ],
+  &quot;rows&quot;: 17
+ },
+ {
+  &quot;file&quot;: &quot;data/board/matches.json&quot;,
+  &quot;sports&quot;: [
+   &quot;baseball&quot;,
+   &quot;basketball&quot;,
+   &quot;cricket&quot;,
+   &quot;darts&quot;,
+   &quot;gaelic-football&quot;,
+   </pre></details>
+<p class="small"><strong>Action:</strong> Reported, not edited: these files belong to merged sessions.</p></div><div class="card" style="margin:12px 0"><h3>MF-03 · 47 separate dashboards publish an overlapping 15-sport brief</h3>
+<p class="small"><span class="badge medium">medium</span></p>
+<p>Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /meridian/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.</p>
+<details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">[
+ {
+  &quot;layers&quot;: [
+   &quot;atlas&quot;,
+   &quot;audit65&quot;,
+   &quot;beacon&quot;,
+   &quot;board&quot;,
+   &quot;brief&quot;,
+   &quot;cadence&quot;,
+   &quot;canon&quot;,
+   &quot;clarity&quot;,
+   &quot;command&quot;,
+   &quot;covered&quot;,
+   &quot;current&quot;,
+   &quot;daily&quot;,
+   &quot;daily-audit&quot;,
+   &quot;daily-picks&quot;,
+   &quot;desk&quot;,
+   &quot;evidence&quot;,
+   &quot;executive&quot;,
+   &quot;final&quot;,
+   &quot;final-desk&quot;,
+   &quot;focus&quot;,
+   &quot;forward&quot;,
+   &quot;fresh&quot;,
+   &quot;horizon&quot;,
+   &quot;hub&quot;,
+   &quot;ledger&quot;,
+   &quot;live&quot;,
+   &quot;liveboard&quot;,
+   &quot;master&quot;,
+   &quot;meridian&quot;,
+   &quot;monitor&quot;,
+   &quot;olbg&quot;,
+   &quot;portal&quot;,
+   &quot;pulse&quot;,
+   &quot;quest&quot;,
+   &quot;reconcile&quot;,
+   &quot;relay&quot;,
+   &quot;signal&quot;,
+   &quot;site&quot;,
+   &quot;slate&quot;,
+   &quot;sports&quot;,
+   &quot;summit&quot;,
+   &quot;survey&quot;,
+   &quot;today&quot;,
+   &quot;update&quot;,
+   &quot;vanguard&quot;,
+   &quot;verified&quot;,
+   &quot;zenith&quot;
+  ],
+  &quot;count&quot;: 47
+ }
+]</pre></details>
+<p class="small"><strong>Action:</strong> Root integration request recorded in COORDINATION.md.</p></div><div class="card" style="margin:12px 0"><h3>MF-04 · Merge-conflict markers are still checked in to the shared task board</h3>
+<p class="small"><span class="badge medium">medium</span></p>
+<p>COORDINATION.md carries 8 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.</p>
+<details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">[
+ {
+  &quot;file&quot;: &quot;COORDINATION.md&quot;,
+  &quot;lines&quot;: [
+   3216,
+   3307,
+   3437,
+   3549,
+   3609,
+   3628,
+   4895,
+   5193
+  ]
+ }
+]</pre></details>
+<p class="small"><strong>Action:</strong> Left in place; this session appends only.</p></div>
+
+</div></main>
+<footer><div class="wrap">
+Snapshot captured 2026-10-24 18:10 UTC · every row carries the official page it came from ·
+<a href="index.html">Executive summary</a> · <a href="picks.html">Picks</a> · <a href="predictions.html">Predictions</a> · <a href="matches.html">All matches</a> · <a href="lines.html">Originated lines</a> · <a href="band.html">Odds band</a> · <a href="flagged.html">Flagged for review</a>
+</div></footer>
+</body></html>

@@ -1,0 +1,1028 @@
+{
+ "generated_utc": "2026-10-24T18:10:00Z",
+ "count": 4,
+ "layers": 47,
+ "findings": [
+  {
+   "id": "MF-01",
+   "severity": "high",
+   "title": "95 published prediction texts elsewhere in the repo use banned vocabulary",
+   "detail": "The reader-facing predictions in other data layers still contain the words the brief bans ('model', 'verified'). This session does not edit those files because they belong to other sessions; the files and line numbers are listed so the owning sessions can fix them.",
+   "evidence": [
+    {
+     "file": "data/atlas/predictions.json",
+     "entries": 29,
+     "total": 41,
+     "first_line": 34
+    },
+    {
+     "file": "data/board/predictions.json",
+     "entries": 2,
+     "total": 35,
+     "first_line": 543
+    },
+    {
+     "file": "data/daily/predictions.json",
+     "entries": 24,
+     "total": 45,
+     "first_line": 84
+    },
+    {
+     "file": "data/daily-audit/predictions.json",
+     "entries": 1,
+     "total": 5,
+     "first_line": 186
+    },
+    {
+     "file": "data/final/predictions.json",
+     "entries": 17,
+     "total": 19,
+     "first_line": 24
+    },
+    {
+     "file": "data/forward/predictions.json",
+     "entries": 4,
+     "total": 8,
+     "first_line": 89
+    },
+    {
+     "file": "data/hub/predictions.json",
+     "entries": 1,
+     "total": 25,
+     "first_line": 664
+    },
+    {
+     "file": "data/predictions.json",
+     "entries": 6,
+     "total": 6,
+     "first_line": 13
+    },
+    {
+     "file": "data/predictions_archived.json",
+     "entries": 3,
+     "total": 3,
+     "first_line": 12
+    },
+    {
+     "file": "data/relay/predictions.json",
+     "entries": 4,
+     "total": 20,
+     "first_line": 55
+    },
+    {
+     "file": "data/vanguard/predictions.json",
+     "entries": 2,
+     "total": 21,
+     "first_line": 244
+    },
+    {
+     "file": "data/verified/predictions.json",
+     "entries": 2,
+     "total": 14,
+     "first_line": 21
+    }
+   ],
+   "action": "Left untouched by this session; listed for the owning sessions."
+  },
+  {
+   "id": "MF-02",
+   "severity": "high",
+   "title": "Data files outside the exact-15-sport list carry Aussie Rules and eSports rows",
+   "detail": "Layers outside this desk publish rows for sports that are not in the brief's list of fifteen, so the claim and the data disagree on the same branch.",
+   "evidence": [
+    {
+     "file": "data/atlas/capture_atp.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 11
+    },
+    {
+     "file": "data/atlas/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 300
+    },
+    {
+     "file": "data/atlas/predictions.json",
+     "sports": [
+      "baseball",
+      "ice-hockey"
+     ],
+     "rows": 41
+    },
+    {
+     "file": "data/beacon/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 209
+    },
+    {
+     "file": "data/beacon/predictions.json",
+     "sports": [
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "handball",
+      "rugby-league",
+      "rugby-union",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/board/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "volleyball"
+     ],
+     "rows": 207
+    },
+    {
+     "file": "data/board/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "rugby-union",
+      "snooker"
+     ],
+     "rows": 35
+    },
+    {
+     "file": "data/brief/prose_a.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 20
+    },
+    {
+     "file": "data/brief/prose_b.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 19
+    },
+    {
+     "file": "data/canon/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 57
+    },
+    {
+     "file": "data/canon/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 54
+    },
+    {
+     "file": "data/command/matches.json",
+     "sports": [
+      "baseball",
+      "greyhounds",
+      "ice-hockey",
+      "rugby-league",
+      "tennis"
+     ],
+     "rows": 39
+    },
+    {
+     "file": "data/command/sources.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 26
+    },
+    {
+     "file": "data/command/sports.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/current/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union",
+      "snooker"
+     ],
+     "rows": 57
+    },
+    {
+     "file": "data/current/predictions.json",
+     "sports": [
+      "basketball",
+      "handball",
+      "ice-hockey",
+      "rugby-union"
+     ],
+     "rows": 29
+    },
+    {
+     "file": "data/daily/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union"
+     ],
+     "rows": 45
+    },
+    {
+     "file": "data/daily-audit/predictions.json",
+     "sports": [
+      "tennis"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/daily-picks/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "ice-hockey",
+      "rugby-league",
+      "rugby-union"
+     ],
+     "rows": 29
+    },
+    {
+     "file": "data/daily-picks/picks.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "ice-hockey",
+      "rugby-league",
+      "rugby-union"
+     ],
+     "rows": 23
+    },
+    {
+     "file": "data/daily-picks/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "ice-hockey",
+      "rugby-league",
+      "rugby-union"
+     ],
+     "rows": 23
+    },
+    {
+     "file": "data/desk/archived_picks.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 4
+    },
+    {
+     "file": "data/final/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 365
+    },
+    {
+     "file": "data/final/predictions.json",
+     "sports": [
+      "basketball",
+      "ice-hockey",
+      "rugby-union",
+      "tennis"
+     ],
+     "rows": 19
+    },
+    {
+     "file": "data/final-desk/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "darts",
+      "ice-hockey",
+      "rugby-union",
+      "tennis"
+     ],
+     "rows": 27
+    },
+    {
+     "file": "data/final-desk/predictions.json",
+     "sports": [
+      "rugby-union"
+     ],
+     "rows": 1
+    },
+    {
+     "file": "data/focus/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 40
+    },
+    {
+     "file": "data/focus/predictions.json",
+     "sports": [
+      "handball",
+      "ice-hockey",
+      "rugby-union"
+     ],
+     "rows": 11
+    },
+    {
+     "file": "data/forward/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "ice-hockey"
+     ],
+     "rows": 93
+    },
+    {
+     "file": "data/forward/predictations.json",
+     "sports": [
+      "ice-hockey"
+     ],
+     "rows": 8
+    },
+    {
+     "file": "data/forward/predictions.json",
+     "sports": [
+      "ice-hockey"
+     ],
+     "rows": 8
+    },
+    {
+     "file": "data/hub/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union",
+      "snooker",
+      "tennis"
+     ],
+     "rows": 25
+    },
+    {
+     "file": "data/ledger/prose.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 19
+    },
+    {
+     "file": "data/live/predictions.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 4
+    },
+    {
+     "file": "data/olbg/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis"
+     ],
+     "rows": 94
+    },
+    {
+     "file": "data/olbg/predictions.json",
+     "sports": [
+      "basketball",
+      "ice-hockey"
+     ],
+     "rows": 7
+    },
+    {
+     "file": "data/olbgdesk/predictions.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 6
+    },
+    {
+     "file": "data/portal/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 227
+    },
+    {
+     "file": "data/portal/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 30
+    },
+    {
+     "file": "data/predictions.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 6
+    },
+    {
+     "file": "data/predictions_archived.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 3
+    },
+    {
+     "file": "data/pulse/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union",
+      "snooker",
+      "tennis"
+     ],
+     "rows": 48
+    },
+    {
+     "file": "data/relay/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union"
+     ],
+     "rows": 38
+    },
+    {
+     "file": "data/relay/predictions.json",
+     "sports": [
+      "basketball",
+      "handball",
+      "ice-hockey",
+      "rugby-union"
+     ],
+     "rows": 20
+    },
+    {
+     "file": "data/signal/captures/darts_olbg.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 12
+    },
+    {
+     "file": "data/signal/captures/gaelic_gaa.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 1
+    },
+    {
+     "file": "data/signal/captures/handball_ehf.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/signal/captures/rugby_union_prem.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/signal/captures/snooker_wst.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 12
+    },
+    {
+     "file": "data/slate/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis"
+     ],
+     "rows": 191
+    },
+    {
+     "file": "data/slate/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis"
+     ],
+     "rows": 34
+    },
+    {
+     "file": "data/survey/events/baseball.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 1
+    },
+    {
+     "file": "data/survey/events/basketball.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 14
+    },
+    {
+     "file": "data/survey/events/cricket.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 14
+    },
+    {
+     "file": "data/survey/events/darts.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 16
+    },
+    {
+     "file": "data/survey/events/gaelic_football.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/survey/events/golf.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 10
+    },
+    {
+     "file": "data/survey/events/handball.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 14
+    },
+    {
+     "file": "data/survey/events/ice_hockey.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 9
+    },
+    {
+     "file": "data/survey/events/motor_racing.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 4
+    },
+    {
+     "file": "data/survey/events/rugby_league.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 3
+    },
+    {
+     "file": "data/survey/events/rugby_union.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 16
+    },
+    {
+     "file": "data/survey/events/snooker.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 8
+    },
+    {
+     "file": "data/survey/events/tennis.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 14
+    },
+    {
+     "file": "data/survey/events/volleyball.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 12
+    },
+    {
+     "file": "data/survey/flags.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 7
+    },
+    {
+     "file": "data/survey/picks.json",
+     "sports": [
+      "baseball",
+      "darts",
+      "rugby_union",
+      "snooker"
+     ],
+     "rows": 25
+    },
+    {
+     "file": "data/survey/predictions.json",
+     "sports": [
+      "darts",
+      "rugby_union"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/survey/sports.json",
+     "sports": [
+      "None"
+     ],
+     "rows": 25
+    },
+    {
+     "file": "data/update/band.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union"
+     ],
+     "rows": 114
+    },
+    {
+     "file": "data/update/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 208
+    },
+    {
+     "file": "data/update/predictions.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-union"
+     ],
+     "rows": 165
+    },
+    {
+     "file": "data/vanguard/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "tennis",
+      "volleyball"
+     ],
+     "rows": 77
+    },
+    {
+     "file": "data/vanguard/predictions.json",
+     "sports": [
+      "basketball",
+      "darts",
+      "handball",
+      "ice-hockey",
+      "rugby-union"
+     ],
+     "rows": 21
+    },
+    {
+     "file": "data/verified/matches.json",
+     "sports": [
+      "baseball",
+      "basketball",
+      "cricket",
+      "darts",
+      "gaelic-football",
+      "golf",
+      "greyhounds",
+      "handball",
+      "ice-hockey",
+      "motor-racing",
+      "rugby-league",
+      "rugby-union",
+      "snooker",
+      "volleyball"
+     ],
+     "rows": 188
+    },
+    {
+     "file": "data/verified/predictions.json",
+     "sports": [
+      "basketball",
+      "handball",
+      "ice-hockey",
+      "rugby-union"
+     ],
+     "rows": 14
+    },
+    {
+     "file": "data/verified/research_picks_26963a2d.json",
+     "sports": [
+      "baseball",
+      "darts",
+      "ice-hockey",
+      "rugby-union",
+      "snooker"
+     ],
+     "rows": 16
+    }
+   ],
+   "action": "Reported, not edited: these files belong to merged sessions."
+  },
+  {
+   "id": "MF-03",
+   "severity": "medium",
+   "title": "47 separate dashboards publish an overlapping 15-sport brief",
+   "detail": "Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /meridian/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.",
+   "evidence": [
+    {
+     "layers": [
+      "atlas",
+      "audit65",
+      "beacon",
+      "board",
+      "brief",
+      "cadence",
+      "canon",
+      "clarity",
+      "command",
+      "covered",
+      "current",
+      "daily",
+      "daily-audit",
+      "daily-picks",
+      "desk",
+      "evidence",
+      "executive",
+      "final",
+      "final-desk",
+      "focus",
+      "forward",
+      "fresh",
+      "horizon",
+      "hub",
+      "ledger",
+      "live",
+      "liveboard",
+      "master",
+      "meridian",
+      "monitor",
+      "olbg",
+      "portal",
+      "pulse",
+      "quest",
+      "reconcile",
+      "relay",
+      "signal",
+      "site",
+      "slate",
+      "sports",
+      "summit",
+      "survey",
+      "today",
+      "update",
+      "vanguard",
+      "verified",
+      "zenith"
+     ],
+     "count": 47
+    }
+   ],
+   "action": "Root integration request recorded in COORDINATION.md."
+  },
+  {
+   "id": "MF-04",
+   "severity": "medium",
+   "title": "Merge-conflict markers are still checked in to the shared task board",
+   "detail": "COORDINATION.md carries 8 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.",
+   "evidence": [
+    {
+     "file": "COORDINATION.md",
+     "lines": [
+      3216,
+      3307,
+      3437,
+      3549,
+      3609,
+      3628,
+      4895,
+      5193
+     ]
+    }
+   ],
+   "action": "Left in place; this session appends only."
+  }
+ ]
+}

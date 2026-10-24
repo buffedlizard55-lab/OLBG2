@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OLBG reverse engineering · OLBG2 /meridian/</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="index.html">OLBG2 <span>/meridian/ · 24 Oct 2026 snapshot</span></a>
+<nav class="main"><a href="index.html">Executive summary</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="band.html">Odds band</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="olbg.html" class="on">OLBG</a><a href="repo-review.html">Repo review</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>OLBG reverse engineering</h1>
+<p class="lede">The route schema, market vocabulary and defects, read first-hand.</p>
+
+<p class="lede">What OLBG actually exposes, read first-hand on 2026-10-24 across all fifteen requested sports.</p>
+<h2>Route schema</h2>
+<p>Every sport is served at <code>/betting-tips/<Sport>/<id></code>, and individual events at
+<code>/betting-tips/<Sport>/<Competition>/<Group>/<Home>_v_<Away>/<id>?event_id=<n></code>.
+Event pages list markets as Money Line, Puck Line, Game Totals, Pointspread, Handicap, Win Match 2-way,
+Total 180s, Most 180s, Handicap 2-way, Total Legs, Frame Betting, Top Team1 Batsman and Outright Winner.
+A single event page can carry five or more markets, which is what makes the "investigate every market"
+requirement tractable from OLBG's own vocabulary.</p>
+<div class="notice warn"><strong>Two route traps.</strong> Ice Hockey is id <strong>13</strong>; id 11 is
+American Football. Gaelic sports are split: Gaelic Football is <strong>25</strong> and Hurling is
+<strong>26</strong>. A layer that uses 11 for hockey, or that assumes one Gaelic route, is wrong.</div>
+<h2>The fifteen hubs, as read</h2>
+<div class="table-wrap"><table><thead><tr><th>Sport</th><th>OLBG id</th><th>Hub</th><th>Listed events seen</th><th>Note</th></tr></thead>
+<tbody><tr><td>Golf</td><td>5</td><td class="small"><a href="https://www.olbg.com/betting-tips/Golf/5">https://www.olbg.com/betting-tips/Golf/5</a></td><td>0</td><td class="small">Hub returned HTTP 200 but rendered &#x27;No tips found.&#x27; while a PGA TOUR event was in progress</td></tr><tr><td>Volleyball</td><td>21</td><td class="small"><a href="https://www.olbg.com/betting-tips/Volleyball/21">https://www.olbg.com/betting-tips/Volleyball/21</a></td><td>20</td><td class="small"></td></tr><tr><td>Rugby Union</td><td>9</td><td class="small"><a href="https://www.olbg.com/betting-tips/Rugby_Union/9">https://www.olbg.com/betting-tips/Rugby_Union/9</a></td><td>6</td><td class="small"></td></tr><tr><td>Cricket</td><td>7</td><td class="small"><a href="https://www.olbg.com/betting-tips/Cricket/7">https://www.olbg.com/betting-tips/Cricket/7</a></td><td>14</td><td class="small"></td></tr><tr><td>Snooker</td><td>8</td><td class="small"><a href="https://www.olbg.com/betting-tips/Snooker/8">https://www.olbg.com/betting-tips/Snooker/8</a></td><td>1</td><td class="small"></td></tr><tr><td>Darts</td><td>15</td><td class="small"><a href="https://www.olbg.com/betting-tips/Darts/15">https://www.olbg.com/betting-tips/Darts/15</a></td><td>6</td><td class="small"></td></tr><tr><td>Baseball</td><td>12</td><td class="small"><a href="https://www.olbg.com/betting-tips/Baseball/12">https://www.olbg.com/betting-tips/Baseball/12</a></td><td>1</td><td class="small"></td></tr><tr><td>Gaelic Sports</td><td>25</td><td class="small"><a href="https://www.olbg.com/betting-tips/Gaelic_Football/25">https://www.olbg.com/betting-tips/Gaelic_Football/25</a></td><td>5</td><td class="small">Gaelic Football hub; Hurling is a separate route at /Hurling/26 (event_id 714 listed).</td></tr><tr><td>Greyhounds</td><td>28</td><td class="small"><a href="https://www.olbg.com/betting-tips/Greyhounds/28">https://www.olbg.com/betting-tips/Greyhounds/28</a></td><td>20</td><td class="small"></td></tr><tr><td>Tennis</td><td>3</td><td class="small"><a href="https://www.olbg.com/betting-tips/Tennis/3">https://www.olbg.com/betting-tips/Tennis/3</a></td><td>6</td><td class="small"></td></tr><tr><td>Motor Racing</td><td>14</td><td class="small"><a href="https://www.olbg.com/betting-tips/Motor_Racing/14">https://www.olbg.com/betting-tips/Motor_Racing/14</a></td><td>1</td><td class="small"></td></tr><tr><td>Handball</td><td>20</td><td class="small"><a href="https://www.olbg.com/betting-tips/Handball/20">https://www.olbg.com/betting-tips/Handball/20</a></td><td>20</td><td class="small"></td></tr><tr><td>Ice Hockey</td><td>13</td><td class="small"><a href="https://www.olbg.com/betting-tips/Ice_Hockey/13">https://www.olbg.com/betting-tips/Ice_Hockey/13</a></td><td>20</td><td class="small"></td></tr><tr><td>Basketball</td><td>4</td><td class="small"><a href="https://www.olbg.com/betting-tips/Basketball/4">https://www.olbg.com/betting-tips/Basketball/4</a></td><td>20</td><td class="small"></td></tr><tr><td>Rugby League</td><td>10</td><td class="small"><a href="https://www.olbg.com/betting-tips/Rugby_League/10">https://www.olbg.com/betting-tips/Rugby_League/10</a></td><td>3</td><td class="small"></td></tr></tbody></table></div>
+<h2>Defects that change how OLBG can be used</h2>
+<ol>
+<li><strong>Times are US Eastern.</strong> A handball fixture OLBG lists as "Today 14:00" is 20:00 CEST on
+the league's own page. Six hours, every row.</li>
+<li><strong>Prices are blank on some event pages.</strong> The NHL event page for Carolina at St. Louis
+renders "WIN @" with no number after it, while the tip counts render normally.</li>
+<li><strong>"No tips found."</strong> The golf hub returned that string on a day a PGA TOUR event was in
+progress, so a listing-driven desk would conclude golf has no fixtures.</li>
+<li><strong>Outright-only sports.</strong> Rugby League returned three 2027 futures and no match market.</li>
+<li><strong>Tip share is not a probability.</strong> "15/26 Win Tips 58%" is the share of tipsters, not a
+chance of winning, and it is not used as a pricing input here.</li>
+</ol>
+<h2>How this desk uses OLBG</h2>
+<p>As a cross-check that a fixture is being offered to bettors, and as the source of the event URL printed on
+rows that have one. Never as a price, never as a probability, and never as a substitute for a governance
+source.</p>
+
+</div></main>
+<footer><div class="wrap">
+Snapshot captured 2026-10-24 18:10 UTC · every row carries the official page it came from ·
+<a href="index.html">Executive summary</a> · <a href="picks.html">Picks</a> · <a href="predictions.html">Predictions</a> · <a href="matches.html">All matches</a> · <a href="lines.html">Originated lines</a> · <a href="band.html">Odds band</a> · <a href="flagged.html">Flagged for review</a>
+</div></footer>
+</body></html>

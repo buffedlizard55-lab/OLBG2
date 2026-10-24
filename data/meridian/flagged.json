@@ -1,0 +1,103 @@
+{
+ "generated_utc": "2026-10-24T18:10:00Z",
+ "count": 12,
+ "high": 5,
+ "items": [
+  {
+   "id": "MF-10",
+   "severity": "high",
+   "sport": "Multiple",
+   "title": "Write-up shortfall against the five-per-sport target",
+   "detail": "6 write-ups are published across 9 of the 15 sports. Sports with a pick but fewer than five write-ups: Volleyball (2), Rugby Union (2), Cricket (4), Darts (5), Baseball (1), Gaelic Sports (0), Tennis (3), Motor Racing (1), Ice Hockey (7), Basketball (5). Sports with no write-up at all: Golf, Snooker, Gaelic Sports, Greyhounds, Handball, Rugby League. A write-up is only published where a selection cleared the focus band with two or more officially sourced facts; the alternative is invention.",
+   "source": "data/meridian/predictions.json"
+  },
+  {
+   "id": "MF-11",
+   "severity": "high",
+   "sport": "Multiple",
+   "title": "12 fixtures are published without an originated line",
+   "detail": "Each row states its own reason. Grouped: Darts: 1; Gaelic Sports: 1; Greyhounds: 2; Handball: 3; Ice Hockey: 3; Rugby Union: 1; Volleyball: 1.",
+   "source": "data/meridian/matches.json"
+  },
+  {
+   "id": "MF-12",
+   "severity": "high",
+   "sport": "Golf",
+   "title": "Golf returned no listings on OLBG",
+   "detail": "The Golf hub returned 'No tips found.' at 17:16 UTC on 2026-10-24 while a PGA TOUR event was in progress, so no golf fixture could be attached to a pick.",
+   "source": "https://www.olbg.com/betting-tips/Golf/5"
+  },
+  {
+   "id": "MF-13",
+   "severity": "high",
+   "sport": "Rugby League",
+   "title": "Rugby League listed only 2027 outright futures",
+   "detail": "The Rugby League hub listed State of Origin 2027, Super League 2027 and NRL 2027 outrights, but no Rugby League match event, so no Rugby League fixture is published.",
+   "source": "https://www.olbg.com/betting-tips/Rugby_League/10"
+  },
+  {
+   "id": "MF-14",
+   "severity": "high",
+   "sport": "Snooker",
+   "title": "Snooker's only upcoming fixture has an unresolved opponent",
+   "detail": "The Northern Ireland Open final is Kyren Wilson against the winner of Mark Williams v Jak Jones; with the second finalist unknown at capture, no opponent-dependent market can be originated.",
+   "source": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "MF-15",
+   "severity": "medium",
+   "sport": "Handball",
+   "title": "Handball tables render client-side, so no two-sided input exists",
+   "detail": "The HBL table page and the LNH standings page render their numbers client-side, so neither side's goals-for/against could be read for the three handball fixtures.",
+   "source": "https://www.opel-hbl.de/de/hbl/tabelle"
+  },
+  {
+   "id": "MF-16",
+   "severity": "medium",
+   "sport": "Volleyball",
+   "title": "Volleyball lines rest on a documented class prior, not on a table",
+   "detail": "Lega Pallavolo and the Volleyball Bundesliga publish their standings client-side. The per-set probabilities are keyed to verified status facts and are labelled as an assumption on the row.",
+   "source": "https://www.legavolley.it/classifica/?IdCampionato=999&lang=en"
+  },
+  {
+   "id": "MF-17",
+   "severity": "medium",
+   "sport": "Tennis",
+   "title": "No serve or return statistics were published for these matches",
+   "detail": "The set-level edge is keyed to the official seed line and, for Almaty, to the published head-to-head. Where neither exists (Basel, Vienna) the class prior is stated on the row.",
+   "source": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview"
+  },
+  {
+   "id": "MF-18",
+   "severity": "medium",
+   "sport": "Basketball",
+   "title": "Five NBA teams had not filed an injury report at the 1:00 PM ET deadline",
+   "detail": "Milwaukee, Washington, San Antonio, New Orleans and Golden State were listed NOT YET SUBMITTED. Their absences are unknown, not zero, and the rows say so.",
+   "source": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_30PM.pdf"
+  },
+  {
+   "id": "MF-19",
+   "severity": "medium",
+   "sport": "Motor Racing",
+   "title": "The F1 race line is originated before qualifying",
+   "detail": "The grid was not set at capture. The race field is priced from the two published practice orders and the championship table, and the row states that qualifying was still to come.",
+   "source": "https://www.formula1.com/en/racing/2026/united-states"
+  },
+  {
+   "id": "MF-20",
+   "severity": "medium",
+   "sport": "Darts",
+   "title": "Darts per-match start times are not published",
+   "detail": "The PDC publishes only the session window (19:00-23:00 CEST for the Saturday evening Round Two), not per-match times, so all five darts rows carry the session window.",
+   "source": "https://www.pdc.tv/news/2026/october/24/2026-machineseeker-european-championship---day-three-latest"
+  },
+  {
+   "id": "MF-21",
+   "severity": "medium",
+   "sport": "Multiple",
+   "title": "OLBG renders fixture times in US Eastern time",
+   "detail": "OLBG hub pages localize kick-offs to the requester's time zone without stating it (for example a 23:00Z NHL game renders as 'Today 19:07'). All times on this desk come from the governing body and are stored in UTC.",
+   "source": "https://www.olbg.com/betting-tips"
+  }
+ ]
+}

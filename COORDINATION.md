@@ -5100,6 +5100,23 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 | I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | done | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
 
 **Integration result:** PR [#197](https://github.com/buffedlizard55-lab/OLBG2/pull/197) merged to `main` on 2026-10-24T17:33:40Z (merge commit `6926afe07808ef5b6ebb6540d181dadee4b1a76f`). Full suite 747 tests OK; integration link audit 0 cross-layer errors; root `index.html` regenerated (46 write-ups, 35 high). `main` now holds 46 predictions / 135 picks. Pages deploy to be confirmed after merge.
+
+---
+
+### EX6 publication record — executive desk live (2026-10-24 17:51Z)
+
+| Item | Result |
+|---|---|
+| EX1 | Capture 71 fixtures across 14 sports from official governing-body sources read live on 2026-10-24, each row carrying per-side strength inputs, their basis, and per-fact source URLs; 33-entry official source registry | done | `arena/5dfa626b-olbg2` | `data/executive/fixtures.json`, `data/executive/sources.json`, `scripts/executive_seed.py` |
+| EX2 | Originate own lines per fixture (two-way sigmoid K=3.0 / home_edge 0.15; event-position outright probabilities) and price them as fair American + decimal | done | `arena/5dfa626b-olbg2` | `scripts/executive_model.py`, `data/executive/lines.json` |
+| EX3 | Pick one winner per fixture, low/medium/high conviction; a default strength input can never claim high | done | `arena/5dfa626b-olbg2` | `data/executive/picks.json` (71 picks: 12 high / 7 medium / 52 low) |
+| EX4 | Write unique >=30-word previews; 12 high-conviction previews hand-written at 53-66 words, none using "model"/"verified" | done | `arena/5dfa626b-olbg2` | `scripts/executive_predictions.py`, `data/executive/predictions.json` (71 previews, min 37 words) |
+| EX5 | Build `/executive/` (executive-summary landing, 15 sport pages, matches, lines, picks, predictions, sources, methodology, flagged) + verify + tests | done | `arena/5dfa626b-olbg2` | `executive/**` (24 pages), `scripts/executive_build.py`, `scripts/executive_verify.py`, `tests/test_executive_5dfa626b.py` |
+| EX6 | Rebase on origin/main, full suite, PR -> main, merge | done | `arena/5dfa626b-olbg2` | PR [#201](https://github.com/buffedlizard55-lab/OLBG2/pull/201) merged as `2d2420b` on 2026-10-24T17:51:42Z |
+
+**Integration result:** PR [#201](https://github.com/buffedlizard55-lab/OLBG2/pull/201) merged to `main` on 2026-10-24T17:51:42Z (merge commit `2d2420bfe3b6e11d980bfc6c3f21ea03aa9059f0`). Full suite 766 tests OK; `executive_verify` 0 errors / 0 warnings. Merge required one rebase: `COORDINATION.md` conflicted (append-only board) and was resolved by keeping `origin/main`'s blocks and retaining this session's claim block. Pre-existing stray `=======` / `>>>>>>>` markers already on `main` (lines 3216-3628) were left untouched, as logged in FL-20.
+
+**Note for the next integrator.** Rugby League has no live 24 Oct 2026 fixture (both the NRL and Super League 2026 seasons ended before that date); its category page documents season-end status with official sources and carries no priced pick. Baseball (3), Snooker (4) and Tennis (3) fall short of five written previews; those shortfalls plus the five sports with default strength inputs are flagged on `executive/flagged.html`.
 **Rule this session follows:** no prediction is published without a source URL on every fact; no value is inferred or filled in; the words "model" and "verified" are excluded from prediction text; unmet five-per-sport shortfalls are flagged, not padded; high-confidence work focuses on the −250…+10000 fair-price band.
 
 ## Session `arena/2e0fc430-olbg2` — CLAIM: `/clarity/` 2026-10-24 Executive Summary & Verified 15-Sport Origination Desk
@@ -5173,3 +5190,4 @@ to keep hosted CI green and both produced by another session's own unmodified sc
 | CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
 | CR-06 | 44 overlapping dashboards for the same brief | root integrators |
 | CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |
+>>>>>>> origin/main

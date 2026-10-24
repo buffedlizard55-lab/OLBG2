@@ -278,7 +278,7 @@ NAV = [
     ("today/picks.html", "Today's picks"),
     ("today/predictions.html", "Today's written predictions"),
     ("master/index.html", "Consolidated desk (my own lines, 23 Oct 22:00)"),
-    ("cadence/index.html", "Earlier: exact 15-sport card & evidence audit"),
+    ("cadence/index.html", "Current: Exact 15-sport card & evidence audit"),
     ("cadence/matches.html", "Current matches"),
     ("cadence/picks.html", "Current top-five picks"),
     ("cadence/lines.html", "Current originated lines"),

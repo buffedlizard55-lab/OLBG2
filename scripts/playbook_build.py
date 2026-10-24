@@ -85,6 +85,10 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--muted);f
 """.strip()
 
 
+def plural(n: int, word: str) -> str:
+    return f"{n} {word}" if n == 1 else f"{n} {word}s"
+
+
 def esc(x) -> str:
     return html.escape(str(x), quote=True)
 
@@ -246,7 +250,7 @@ def write_front_door() -> str:
   <div class="kpi"><div class="v">{sources_doc['count']}</div><div class="k">sources linked</div></div>
 </div>
 
-<h2>Today's strongest calls</h2>
+<h2>The strongest calls on the desk</h2>
 <div class="pickgrid">{''.join(pick_card(p) for p in root_picks)}</div>
 <p class="note"><a href="playbook/picks.html">All {big} picks, with price, chance, band and source on every row →</a></p>
 
@@ -353,7 +357,7 @@ confirm is on <a href="flagged.html"><b>Flagged</b></a>, never in the tables.</p
 </div>
 
 <h2>The highest-confidence calls</h2>
-<p class="note">High confidence here means three things at once: an official league input behind the price, a modelled
+<p class="note">High confidence here means three things at once: an official league input behind the price, a
 chance of 65% or better, and a price inside the requested −250 to +10000 band. {hi} calls clear all three.</p>
 <div class="pickgrid">{''.join(pick_card(p) for p in highs)}</div>
 
@@ -386,8 +390,8 @@ probability, and why the picks page shows the band as its own column instead of 
 
 <h2>Where each sport stands</h2>
 <div class="chips">
-{''.join(f'<a class="chip" href="sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {len(by_sport_fx.get(s, []))} matches · '
-         f'{len(by_sport_picks.get(s, []))} picks</a>' for s in SPORT_ORDER)}
+{''.join(f'<a class="chip" href="sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {plural(len(by_sport_fx.get(s, [])), "match")} · '
+         f'{plural(len(by_sport_picks.get(s, [])), "pick")}</a>' for s in SPORT_ORDER)}
 </div>
 <p class="note">{len(NO_EVENTS)} sports had nothing to price. Each is named with its reason on the sport page and on
 <a href="flagged.html">Flagged</a>; none of them was filled in.</p>
@@ -421,7 +425,7 @@ OLBG's own page for the match.</p>
   <div class="kpi"><div class="v">{picks_doc['by_tier']['A']}</div><div class="k">backed by league stats</div></div>
 </div>
 <h2>By sport</h2>
-<div class="chips">{''.join(f'<a class="chip" href="sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {len(by_sport_picks.get(s, []))}</a>' for s in SPORT_ORDER)}</div>
+<div class="chips">{''.join(f'<a class="chip" href="sports/{SPORT_SLUG[s]}.html"><b>{esc(s)}</b> · {plural(len(by_sport_picks.get(s, [])), "pick")}</a>' for s in SPORT_ORDER)}</div>
 <h2>The table</h2>
 <div class="tbl-wrap"><table>
 <tr><th>Sport</th><th>Match</th><th>OLBG day</th><th>Selection</th><th>Market</th><th class="num">Our price</th>
@@ -524,7 +528,7 @@ rather than in the table above, which is why the match total is not inflated.</p
             lam = (f'<div class="note">expected goals {l["lambda_home"]:.2f} v {l["lambda_away"]:.2f}</div>')
         lrows.append(f"""<tr><td colspan="6" style="background:#f8fafc">
 <b>{esc(l["event"])}</b> <span class="note">· {esc(l["competition"])} · {esc(l["day"])} · {tier_badge(l["tier"])} ·
-built from {esc(l["input"])} · {n_fx} prices</span>{lam}</td></tr>{detail}""")
+built from {esc(l["input"])} · {plural(n_fx, "price")}</span>{lam}</td></tr>{detail}""")
 
     lines_body = f"""
 <p class="eyebrow">Our lines · {len(all_sel)} prices on {lines_doc['count']} matches</p>
@@ -591,9 +595,9 @@ so the whole picture for one sport sits on one page.</p>
                 + "".join(f'<li>{esc(f["label"])}: <b>{esc(f["value"])}</b> — <a class="src" href="{esc(f["source"])}">source</a></li>' for f in p["facts"])
                 + '</ul></div></article>' for p in pr)
             body = f"""
-<p class="eyebrow">{esc(s)} · {len(fx)} matches · {len(pk)} picks · {len(pr)} previews</p>
+<p class="eyebrow">{esc(s)} · {plural(len(fx), "match")} · {plural(len(pk), "pick")} · {plural(len(pr), "preview")}</p>
 <h1>{esc(s)}</h1>
-<p class="lede">{len(fx)} matches listed by OLBG, {len(pk)} graded picks and {len(pr)} written previews.
+<p class="lede">{plural(len(fx), "match")} listed by OLBG, {plural(len(pk), "graded pick")} and {plural(len(pr), "written preview")}.
 The pick table comes first, because that is what the desk is for.</p>
 <h2>Picks</h2>
 <div class="tbl-wrap"><table>
@@ -707,7 +711,8 @@ column on every table so the shortfall is visible rather than hidden.</p>
 <li>The selection named in the heading, so the bet is never ambiguous.</li>
 <li>Team or player, competition, the situation, and the numbers the case rests on.</li>
 <li>A fact list under each preview, with a link to where each fact was read.</li>
-<li>No use of the words "model" or "verified" anywhere in the prose — those are internal terms.</li>
+<li>No internal jargon in the prose: the terms this desk refuses to publish are enforced by the verifier,
+which fails the build if one appears in a preview.</li>
 </ul>
 
 <h2>5. What is deliberately absent</h2>

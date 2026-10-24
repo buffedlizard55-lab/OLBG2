@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method · OLBG2 /clarity/</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap bar">
+<a class="brand" href="index.html">OLBG2 <span>/clarity/ · 24 Oct 2026 snapshot</span></a>
+<nav class="main"><a href="index.html">Executive summary</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="matches.html">All matches</a><a href="lines.html">Originated lines</a><a href="band.html">Odds band</a><a href="sports/index.html">Sports</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html" class="on">Method</a><a href="olbg.html">OLBG</a><a href="repo-review.html">Repo review</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Method</h1>
+<p class="lede">How a fixture becomes a priced selection.</p>
+
+<p class="lede">Six steps, applied identically to every fixture. The chain never starts from a bookmaker
+price.</p>
+<h2>1. Discovery and listing cross-check</h2>
+<p>The fifteen sports are taken from the brief. OLBG's own sport routes are recorded so the mapping is
+auditable: Ice Hockey is OLBG id 13, Gaelic Football is 25 and Hurling is 26, and id 11 is American Football.
+Every one of the fifteen hubs was read on 2026-10-24. OLBG is a listing source only.</p>
+<h2>2. Fixture confirmation</h2>
+<p>A fixture is published only when a governing body, league or tour page names both participants and a
+start time or a scheduled round. The link on the row is that page. Where only one side is official (for
+example the USA Eagles, whose squad was not published), the row is published with a stated blank.</p>
+<h2>3. Inputs</h2>
+<p>Only official numbers enter the pricing: records, goals or points for and against, games played, league
+tables, match reports, published averages, semi-final times, practice times and scorelines. Where a number
+could not be read, the fixture is blank rather than filled.</p>
+<h2>4. Line origination</h2>
+<table class="small"><thead><tr><th>Sport family</th><th>Transform</th></tr></thead><tbody>
+<tr><td>Ice hockey</td><td>Shrunk multiplicative Poisson over a 0–16 goal grid; overtime and shootout split
+from the tie mass; puck line from P(margin ≥ 2)</td></tr>
+<tr><td>Baseball</td><td>Run expectancy from team runs per game blended with the announced starters' ERA and
+WHIP; extra-inning tie mass split 52/48</td></tr>
+<tr><td>Basketball</td><td>Win-rate logit with a three-win pseudo-count prior and a 0.22 home-court term, plus
+1.6 points of margin per confirmed absence; normal margin and total</td></tr>
+<tr><td>Rugby union</td><td>League-table attack and defence with shrinkage on games played, or points
+difference per game where that is all the league publishes; normal margin and total</td></tr>
+<tr><td>Rugby league</td><td>Round 1 winning margins damped into an expected points line (no per-team points
+table is published in the World Cup match centre)</td></tr>
+<tr><td>Cricket</td><td>Series win-loss differential into a logit; totals held at 50/50 where no venue par
+exists</td></tr>
+<tr><td>Darts, tennis, volleyball</td><td>Race-to-target state model, so every set or leg score is enumerated
+and the handicap and total fall out of the same grid</td></tr>
+<tr><td>Golf, F1, greyhounds</td><td>Outright fields priced from the leaderboard, the practice order and the
+semi-final clock respectively</td></tr>
+</tbody></table>
+<h2>5. Confidence</h2>
+<p>A selection is <strong>high</strong> when a two-way price is at least 60% at a price inside
+−250…+10000, and the sport's inputs are complete. Outright fields are graded on their own scale, because a
+30-runner field never produces a 60% favourite. Each sport then has a ceiling; the ceiling and its reason are
+printed on the sport page and in <code>data/clarity/picks.json</code>.</p>
+<h2>6. Prices</h2>
+<p>Every published price is the reciprocal of the probability: decimal = 1/p, and the American figure follows
+from that same rounded decimal, so the two always agree. There is no margin and no bookmaker input. A price of
+−250 means we think the selection wins one time in 1.40.</p>
+<h2>What would make this desk wrong</h2>
+<p>Small samples, missing injury sheets, a client-rendered table, an unpublished average, or a fixture whose
+start time was captured from a page that later changed. Each of those is named on the Flagged page rather than
+buried.</p>
+
+</div></main>
+<footer><div class="wrap">
+Snapshot captured 2026-10-24 17:35 UTC · every row carries the official page it came from ·
+<a href="index.html">Executive summary</a> · <a href="picks.html">Picks</a> · <a href="predictions.html">Predictions</a> · <a href="matches.html">All matches</a> · <a href="lines.html">Originated lines</a> · <a href="band.html">Odds band</a> · <a href="flagged.html">Flagged for review</a>
+</div></footer>
+</body></html>

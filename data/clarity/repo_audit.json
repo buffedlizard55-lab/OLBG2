@@ -1,0 +1,356 @@
+{
+ "generated_utc": "2026-10-24T17:35:00Z",
+ "count": 7,
+ "layers": 45,
+ "findings": [
+  {
+   "id": "CR-01",
+   "severity": "high",
+   "title": "95 published prediction texts use internal vocabulary the brief bans",
+   "detail": "The brief forbids the words 'model' and 'verified' in reader-facing predictions. These entries are live prose on other desks and were not edited by this session because each file belongs to a different session's scope. Files and line numbers are listed so the owning session can fix them.",
+   "evidence": [
+    {
+     "file": "data/atlas/predictions.json",
+     "entries": 29,
+     "total": 41,
+     "first_line": 34
+    },
+    {
+     "file": "data/board/predictions.json",
+     "entries": 2,
+     "total": 35,
+     "first_line": 543
+    },
+    {
+     "file": "data/daily/predictions.json",
+     "entries": 24,
+     "total": 45,
+     "first_line": 84
+    },
+    {
+     "file": "data/daily-audit/predictions.json",
+     "entries": 1,
+     "total": 5,
+     "first_line": 186
+    },
+    {
+     "file": "data/final/predictions.json",
+     "entries": 17,
+     "total": 19,
+     "first_line": 24
+    },
+    {
+     "file": "data/forward/predictions.json",
+     "entries": 4,
+     "total": 8,
+     "first_line": 89
+    },
+    {
+     "file": "data/hub/predictions.json",
+     "entries": 1,
+     "total": 25,
+     "first_line": 664
+    },
+    {
+     "file": "data/predictions.json",
+     "entries": 6,
+     "total": 6,
+     "first_line": 13
+    },
+    {
+     "file": "data/predictions_archived.json",
+     "entries": 3,
+     "total": 3,
+     "first_line": 12
+    },
+    {
+     "file": "data/relay/predictions.json",
+     "entries": 4,
+     "total": 20,
+     "first_line": 55
+    },
+    {
+     "file": "data/vanguard/predictions.json",
+     "entries": 2,
+     "total": 21,
+     "first_line": 244
+    },
+    {
+     "file": "data/verified/predictions.json",
+     "entries": 2,
+     "total": 14,
+     "first_line": 21
+    }
+   ],
+   "action": "Left untouched by this session; listed for the owning sessions."
+  },
+  {
+   "id": "CR-02",
+   "severity": "high",
+   "title": "Data files inside the 15-sport desks still carry Aussie Rules and eSports rows",
+   "detail": "Seven desks that describe themselves as exact-15-sport layers publish rows for sports that are not in the brief's list. The rows are in committed JSON, so the claim and the data disagree on the same branch.",
+   "evidence": [
+    {
+     "file": "data/atlas/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/beacon/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/beacon/predictions.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 2
+    },
+    {
+     "file": "data/canon/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/canon/predictions.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/command/matches.json",
+     "sports": [
+      "aussie-rules"
+     ],
+     "rows": 9
+    },
+    {
+     "file": "data/daily-picks/matches.json",
+     "sports": [
+      "aussie-rules"
+     ],
+     "rows": 9
+    },
+    {
+     "file": "data/daily-picks/picks.json",
+     "sports": [
+      "aussie-rules"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/daily-picks/predictions.json",
+     "sports": [
+      "aussie-rules"
+     ],
+     "rows": 5
+    },
+    {
+     "file": "data/final/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/portal/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/portal/predictions.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 4
+    },
+    {
+     "file": "data/slate/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 17
+    },
+    {
+     "file": "data/slate/predictions.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 2
+    },
+    {
+     "file": "data/vanguard/matches.json",
+     "sports": [
+      "aussie-rules",
+      "esports"
+     ],
+     "rows": 14
+    }
+   ],
+   "action": "Reported, not edited: these files belong to merged sessions."
+  },
+  {
+   "id": "CR-03",
+   "severity": "high",
+   "title": "The 'future-only' desk still publishes lines and picks on started fixtures",
+   "detail": "PR #194 announced that only fixtures with a confirmed start after the capture cut-off receive an actionable market. Re-scanning the committed data at 2026-10-24T17:35:00Z finds 17 fixtures whose published start time has already passed, carrying 212 originated selections and 20 picks. A pick on a game that has already started cannot be placed.",
+   "evidence": [
+    {
+     "file": "data/zenith/matches.json",
+     "first_past_line": 6,
+     "past_fixtures": 17,
+     "lines_on_past": 212,
+     "picks_on_past": 20,
+     "example": [
+      {
+       "id": "nhl-2026020166",
+       "sport": "Ice Hockey",
+       "start_utc": "2026-10-24T00:00:00Z"
+      },
+      {
+       "id": "nhl-2026020167",
+       "sport": "Ice Hockey",
+       "start_utc": "2026-10-24T01:00:00Z"
+      },
+      {
+       "id": "nba-0022600099",
+       "sport": "Basketball",
+       "start_utc": "2026-10-24T00:00:00Z"
+      }
+     ]
+    }
+   ],
+   "action": "Reported for the Zenith owner; this desk filters on start time instead."
+  },
+  {
+   "id": "CR-04",
+   "severity": "medium",
+   "title": "Merge-conflict markers are still checked in to the shared task board",
+   "detail": "COORDINATION.md carries 7 conflict-marker lines. They are plain text so nothing breaks, but the board is the coordination contract for parallel sessions and the markers make its history ambiguous.",
+   "evidence": [
+    {
+     "file": "COORDINATION.md",
+     "lines": [
+      3216,
+      3307,
+      3437,
+      3549,
+      3609,
+      3628,
+      4895
+     ]
+    }
+   ],
+   "action": "Left in place; this session appends only."
+  },
+  {
+   "id": "CR-05",
+   "severity": "medium",
+   "title": "A published audit finding describes a root page that has since changed",
+   "detail": "The /ledger/ audit's RR-03 states the root status stripe reads 2026-10-22 08:15 UTC. The committed root page now reads 2026-10-23T20:10:00Z. The finding is stale in its own text even though the page it criticises has been rewritten.",
+   "evidence": [
+    {
+     "file": "data/ledger/repo_review.json",
+     "code": "RR-03"
+    },
+    {
+     "file": "index.html",
+     "stripe": "2026-10-23T20:10:00Z"
+    }
+   ],
+   "action": "Reported; the ledger layer is regenerated by its owner's script, not by hand."
+  },
+  {
+   "id": "CR-06",
+   "severity": "medium",
+   "title": "45 separate dashboards publish an overlapping 15-sport brief",
+   "detail": "Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /clarity/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.",
+   "evidence": [
+    {
+     "layers": [
+      "atlas",
+      "audit65",
+      "beacon",
+      "board",
+      "brief",
+      "cadence",
+      "canon",
+      "clarity",
+      "command",
+      "covered",
+      "current",
+      "daily",
+      "daily-audit",
+      "daily-picks",
+      "desk",
+      "evidence",
+      "final",
+      "final-desk",
+      "focus",
+      "forward",
+      "fresh",
+      "horizon",
+      "hub",
+      "ledger",
+      "live",
+      "liveboard",
+      "master",
+      "monitor",
+      "olbg",
+      "portal",
+      "pulse",
+      "quest",
+      "reconcile",
+      "relay",
+      "signal",
+      "site",
+      "slate",
+      "sports",
+      "summit",
+      "survey",
+      "today",
+      "update",
+      "vanguard",
+      "verified",
+      "zenith"
+     ],
+     "count": 45
+    }
+   ],
+   "action": "Root integration request recorded in COORDINATION.md."
+  },
+  {
+   "id": "CR-07",
+   "severity": "info",
+   "title": "OLBG renders fixture times in US Eastern, not UK time",
+   "detail": "Confirmed again on 2026-10-24: OLBG lists HBW Balingen-Weilstetten v MT Melsungen at 'Today 14:00', while the German league publishes 20:00 CEST. 14:00 ET is 20:00 CEST. Any row that mixes an OLBG time with a governing-body time without conversion is six hours out.",
+   "evidence": [
+    {
+     "olbg": "https://www.olbg.com/betting-tips/Handball/20",
+     "official": "https://www.opel-hbl.de/de/team/Rhein-Neckar%20L%C3%B6wen/fe80598a-3952-11ef-914c-af5c55c3771d"
+    }
+   ],
+   "action": "This desk publishes governing-body times and never converts from OLBG."
+  }
+ ]
+}

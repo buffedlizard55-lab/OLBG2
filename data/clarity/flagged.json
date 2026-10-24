@@ -1,0 +1,111 @@
+{
+ "generated_utc": "2026-10-24T17:35:00Z",
+ "count": 13,
+ "high": 4,
+ "items": [
+  {
+   "id": "CL-01",
+   "severity": "high",
+   "sport": "Multiple",
+   "title": "Write-up shortfall against the five-per-sport target",
+   "detail": "31 write-ups are published across 11 of the 15 sports. Sports with a pick but fewer than five write-ups: Golf (2), Volleyball (3), Rugby Union (2), Cricket (4), Darts (1), Baseball (1), Gaelic Sports (0), Greyhounds (2), Tennis (3), Motor Racing (1), Ice Hockey (7), Basketball (5), Rugby League (0). Sports with no write-up at all: Snooker, Gaelic Sports, Handball, Rugby League. A write-up is only published where a selection cleared the focus band with two or more officially sourced facts; the alternative is invention.",
+   "source": "data/clarity/predictions.json"
+  },
+  {
+   "id": "CL-02",
+   "severity": "high",
+   "sport": "Multiple",
+   "title": "9 fixtures are published without an originated line",
+   "detail": "Each row states its own reason. Grouped: Baseball: 1; Gaelic Sports: 1; Handball: 3; Ice Hockey: 1; Rugby League: 1; Rugby Union: 1; Snooker: 1.",
+   "source": "data/clarity/matches.json"
+  },
+  {
+   "id": "CL-03",
+   "severity": "high",
+   "sport": "Handball",
+   "title": "Handball has three verified fixtures and zero lines",
+   "detail": "The HBL table page and the LNH standings page both render their numbers client-side, so neither side's goals-for/against could be read. Only one side per fixture had published European goal totals, which is not a two-sided input.",
+   "source": "https://www.opel-hbl.de/de/hbl/tabelle"
+  },
+  {
+   "id": "CL-04",
+   "severity": "high",
+   "sport": "Snooker",
+   "title": "Snooker's only upcoming fixture has an unresolved opponent",
+   "detail": "The Northern Ireland Open final is Kyren Wilson against the winner of Mark Williams v Jak Jones. With the second finalist unknown at capture, no opponent-dependent market can be originated.",
+   "source": "https://www.wst.tv/matches/"
+  },
+  {
+   "id": "CL-05",
+   "severity": "medium",
+   "sport": "Volleyball",
+   "title": "Volleyball lines rest on a documented class prior, not on a table",
+   "detail": "Lega Pallavolo and the Volleyball Bundesliga both publish their standings client-side. The per-set probabilities are keyed to verified status facts (reigning champions, newly promoted, both won their opener) and are labelled as an assumption on the row.",
+   "source": "https://www.legavolley.it/classifica/?IdCampionato=999&lang=en"
+  },
+  {
+   "id": "CL-06",
+   "severity": "medium",
+   "sport": "Tennis",
+   "title": "No serve or return statistics were published for these matches",
+   "detail": "The set-level edge is keyed to the official seed line and, for Almaty, to the published head-to-head. Where neither exists (Basel, Vienna) the class prior is stated on the row.",
+   "source": "https://www.atptour.com/en/news/djokovic-basel-2026-draw-preview"
+  },
+  {
+   "id": "CL-07",
+   "severity": "medium",
+   "sport": "Basketball",
+   "title": "Four NBA teams had not filed an injury report at the 1:00 PM ET deadline",
+   "detail": "Milwaukee, Washington, San Antonio, New Orleans and Golden State were listed NOT YET SUBMITTED. Their absences are unknown, not zero, and the rows say so.",
+   "source": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_01_00PM.pdf"
+  },
+  {
+   "id": "CL-08",
+   "severity": "medium",
+   "sport": "Darts",
+   "title": "Nathan Aspinall's Round 1 average was not published",
+   "detail": "The PDC published the result (6-3 over Cristo Reyes) but only Littler's 105.05 average. The per-leg edge therefore uses a stated tournament-mean prior.",
+   "source": "https://www.pdc.tv/news/2026/october/23/Littler-kickstarts-European-Championship-title-bid-in-style/"
+  },
+  {
+   "id": "CL-09",
+   "severity": "medium",
+   "sport": "Golf",
+   "title": "Two golf events, two different pricing bases",
+   "detail": "The PGA TOUR leaderboard embeds FanDuel win prices, which are published and labelled market-implied. The DP World Tour leaderboard carries no prices, so that outright field is originated from the leaderboard alone.",
+   "source": "https://www.pgatour.com/leaderboard"
+  },
+  {
+   "id": "CL-10",
+   "severity": "medium",
+   "sport": "Motor Racing",
+   "title": "The F1 race line is originated before qualifying",
+   "detail": "The grid was not set at capture. The race field is priced from the two published practice orders and the championship table, and the row states that qualifying was still to come.",
+   "source": "https://www.formula1.com/en/racing/2026/united-states"
+  },
+  {
+   "id": "CL-11",
+   "severity": "medium",
+   "sport": "Greyhounds",
+   "title": "Two Scurry and two Oaks finalists had no published semi-final time",
+   "detail": "Ballinakill Liam, Newinn Souly, Strike It Skye and Holding Hollie qualified without a time in the GBGB reports. Their shares use the remaining qualifiers' clock as the only official benchmark.",
+   "source": "https://www.gbgb.org.uk/shadow-storm-chases-scurry-gold-cup-history-at-dunstall-park/"
+  },
+  {
+   "id": "CL-12",
+   "severity": "low",
+   "sport": "Cricket",
+   "title": "Cricket totals are competition-typical lines with no edge",
+   "detail": "No innings-level par score for these venues was published in a readable form, so the Over/Under prices sit at 50/50 and are graded low rather than dressed up as a view.",
+   "source": "https://www.ecb.co.uk/news/4594465/how-to-watch-and-follow-the-england-men-v-pakistan-and-sri-lanka"
+  },
+  {
+   "id": "CL-13",
+   "severity": "low",
+   "sport": "Multiple",
+   "title": "OLBG hub capture limits",
+   "detail": "Every one of the 15 OLBG sport hubs was read on 2026-10-24. Golf returned 'No tips found.' while a PGA TOUR event was in progress; Snooker returned a single fixture; Rugby League returned only 2027 outright futures. OLBG is used as a listing cross-check, never as a price source.",
+   "source": "https://www.olbg.com/betting-tips"
+  }
+ ]
+}

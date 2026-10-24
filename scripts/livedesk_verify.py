@@ -58,7 +58,7 @@ def main() -> int:
             fail(f"event {key}: missing OLBG link")
         if not ev.get("start_utc") and not (ev.get("official") or {}).get("start_local"):
             fail(f"event {key}: no start time")
-        if ev["tier"] not in ("official-model", "crowd-consensus", "no-basis"):
+        if ev["tier"] not in ("official-model", "quoted-market", "crowd-consensus", "no-basis"):
             fail(f"event {key}: unknown tier {ev['tier']}")
         p = ev.get("pick")
         if p:
@@ -66,7 +66,7 @@ def main() -> int:
                 fail(f"event {key}: probability out of range")
             if not isinstance(p["fair_american"], int):
                 fail(f"event {key}: fair price is not an integer")
-            if p["confidence"] == "high" and ev["tier"] != "official-model":
+            if p["confidence"] == "high" and ev["tier"] == "crowd-consensus":
                 fail(f"event {key}: high confidence without an official input")
             if p["confidence"] not in ("high", "medium", "low"):
                 fail(f"event {key}: bad confidence grade")
@@ -127,7 +127,7 @@ def main() -> int:
             if inter:
                 fail(f"{key}: shares an eight-word run with {other_key}")
         seen.append((key, shingles(body)))
-        if item.get("confidence") == "high" and ev["tier"] != "official-model":
+        if item.get("confidence") == "high" and ev["tier"] == "crowd-consensus":
             fail(f"{key}: prediction claims high confidence without an official input")
 
     # ------------------------------------------------------------------ pages

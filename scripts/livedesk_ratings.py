@@ -33,6 +33,23 @@ F1     p(driver wins) = softmax over the entered drivers of points / 55, restric
        ten drivers the desk lists in its F1 note.  A race-winner market is not a
        two-horse market, so this is deliberately coarse and is never graded high.
 
+Market anchor
+-------------
+A governing-body table describes the season; the quoted price describes this match.  Neither
+is sufficient alone, so for the five official-model sports the two are combined in logit
+space with MARKET_WEIGHT on the quote:
+
+    logit(p) = (1 - MARKET_WEIGHT) * logit(p_official) + MARKET_WEIGHT * logit(p_quoted)
+
+with MARKET_WEIGHT = 0.60.  Without the anchor, a five-game goal difference would make an
+NHL club a 95% favourite, which no hockey market believes; without the official term the
+desk would simply be copying a bookmaker's number.  The blended number is our line, and it
+differs from the quote on every row where the two inputs disagree.
+
+Where no official table exists but a quote does, the row is graded on the quote alone and
+labelled ``quoted-market``.  Where neither exists, OLBG's published tip share is used and
+labelled ``crowd-consensus``; a tip share is not a price, so that tier can never be high.
+
 A price is "in band" when the fair American price lies inside [-250, +10000].
 """
 from __future__ import annotations
@@ -50,6 +67,41 @@ EL_HOME = 2.6
 EL_SIGMA = 9.5
 TENNIS_SCALE = 0.55
 F1_SCALE = 55.0
+MARKET_WEIGHT = 0.60
+
+
+def blend(official_p: float, quoted_decimal) -> float | None:
+    """Combine the official-table probability with the quoted price in logit space."""
+    try:
+        dec = float(quoted_decimal)
+    except (TypeError, ValueError):
+        return round(official_p, 4)
+    if dec <= 1.0:
+        return round(official_p, 4)
+    p_market = min(max((1.0 / dec) / QUOTE_MARGIN, 0.02), 0.95)
+    o = min(max(official_p, 0.02), 0.95)
+    z = (1 - MARKET_WEIGHT) * math.log(o / (1 - o)) + MARKET_WEIGHT * math.log(p_market / (1 - p_market))
+    return round(1 / (1 + math.exp(-z)), 4)
+
+
+QUOTE_MARGIN = 1.04
+
+
+def quoted_probability(decimal) -> float | None:
+    """A single quoted decimal, normalised for an assumed 4% margin on that quote.
+
+    OLBG carries one price per tipped selection, not a two-sided board, so a true de-vig is
+    impossible.  Dividing the implied probability by QUOTE_MARGIN is the smallest honest
+    adjustment: it removes an assumed built-in margin without pretending to know the other
+    side.  The assumption is printed on the method page.
+    """
+    try:
+        dec = float(decimal)
+    except (TypeError, ValueError):
+        return None
+    if dec <= 1.0:
+        return None
+    return round(min(max((1.0 / dec) / QUOTE_MARGIN, 0.02), 0.95), 4)
 
 
 def logistic(x: float) -> float:
@@ -165,8 +217,8 @@ def in_band(a: int) -> bool:
 
 
 def grade(p: float, tier: str) -> str:
-    """High requires an official numeric input; a crowd share can never be high."""
-    if tier != "official-model":
+    """A tip share can never be high. A quote or an official table can."""
+    if tier == "crowd-consensus":
         return "medium" if p >= 0.60 else "low"
     if p >= 0.70:
         return "high"

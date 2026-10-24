@@ -421,6 +421,7 @@ def main() -> int:
 
     for key, ev in events.items():
         ev["home"], ev["away"] = split_event(ev["name"])
+        ev["kind"] = "match" if ev["away"] else "outright"
         sport = ev["sport"]
         tip = max(ev["tips"], key=lambda t: (int(t.get("win_tips") or 0)))
         ev["primary_tip"] = {k: tip[k] for k in
@@ -444,8 +445,8 @@ def main() -> int:
                     p_home = R.hockey_probability(hs, as_)
                     if p_home is not None:
                         is_home = any(w in norm(tip["selection"]) for w in norm(g["home_name"]).split())
-                        p_sel = p_home if is_home else round(1 - p_home, 4)
-                        tier, detail = "official-model", "NHL club standings"
+                        p_sel = R.blend(p_home if is_home else 1 - p_home, tip.get("decimal"))
+                        tier, detail = "official-model", "NHL club standings blended with the quoted price"
                         facts = {
                             "home_team": official["home"], "away_team": official["away"],
                             "home_record": f"{hs['w']}-{hs['l']}-{hs['otl']}",
@@ -472,8 +473,8 @@ def main() -> int:
                 p_home = R.baseball_probability(hs, as_)
                 if p_home is not None:
                     is_home = any(w in norm(tip["selection"]) for w in norm(official["home"]).split())
-                    p_sel = p_home if is_home else round(1 - p_home, 4)
-                    tier, detail = "official-model", "MLB team season splits"
+                    p_sel = R.blend(p_home if is_home else 1 - p_home, tip.get("decimal"))
+                    tier, detail = "official-model", "MLB team season splits blended with the quoted price"
                     facts = {
                         "home_team": official["home"], "away_team": official["away"],
                         "home_record": official["home_record"], "away_record": official["away_record"],
@@ -496,8 +497,8 @@ def main() -> int:
                 p_home = R.euroleague_probability(hs, as_)
                 if p_home is not None:
                     is_home = any(w in norm(tip["selection"]) for w in norm(official["home"]).split())
-                    p_sel = p_home if is_home else round(1 - p_home, 4)
-                    tier, detail = "official-model", "EuroLeague standings"
+                    p_sel = R.blend(p_home if is_home else 1 - p_home, tip.get("decimal"))
+                    tier, detail = "official-model", "EuroLeague standings blended with the quoted price"
                     facts = {
                         "home_team": official["home"], "away_team": official["away"],
                         "round": official.get("round"), "venue": official.get("venue"),
@@ -513,8 +514,8 @@ def main() -> int:
             pk, ok = norm(player), norm(opponent)
             pr, orow = wta.get(pk), wta.get(ok)
             if pr and orow:
-                p_sel = R.tennis_probability(pr["points"], orow["points"])
-                tier, detail = "official-model", "WTA singles ranking points"
+                p_sel = R.blend(R.tennis_probability(pr["points"], orow["points"]), tip.get("decimal"))
+                tier, detail = "official-model", "WTA ranking points blended with the quoted price"
                 facts = {
                     "player": pr["name"], "player_rank": pr["rank"], "player_points": pr["points"],
                     "opponent": orow["name"], "opponent_rank": orow["rank"],
@@ -532,7 +533,7 @@ def main() -> int:
             if drv:
                 field = [v["points"] for v in f1.values()][:20]
                 p_sel = R.f1_winner_probability(drv["points"], field)
-                tier, detail = "official-model", "F1 drivers' championship points"
+                tier, detail = "official-model", "F1 championship points, race-winner market"
                 facts = {
                     "driver": drv["name"], "team": drv["team"], "position": drv["pos"],
                     "points": drv["points"], "field_size": len(field),
@@ -541,6 +542,11 @@ def main() -> int:
                 official = {"source_url": caps.get("f1_standings", {}).get("final_url"),
                             "captured_at": caps.get("f1_standings", {}).get("requested_at")}
 
+        if p_sel is None:
+            qp = R.quoted_probability(tip.get("decimal"))
+            if qp is not None:
+                p_sel, tier = qp, "quoted-market"
+                detail = "price quoted for this selection by OLBG; no official table is captured for this competition"
         if p_sel is None:
             crowd, why = R.consensus_probability(tip.get("olbg_confidence"), tip.get("win_tips"))
             if crowd is not None:
@@ -573,6 +579,14 @@ def main() -> int:
         seen = [n for n in names if norm(surname(n) if sport in ("Tennis", "Motor Racing") else n) in corpus]
         ev["text_check"] = {"checked": len(used), "names_found": len(seen), "of": len(names),
                             "sources": used}
+        ctx = ""
+        if corpus and names:
+            key = norm(names[0])
+            idx = corpus.find(key)
+            if idx >= 0:
+                window = corpus[max(0, idx - 120): idx + 160]
+                ctx = re.sub(r"\s+", " ", window).strip()
+        ev["official_context"] = ctx
         if not verified and not ev["official"]:
             review.append({
                 "sport": sport, "event": ev["name"], "start_utc": ev["start_utc"],
@@ -587,10 +601,11 @@ def main() -> int:
 
     # top five per sport: strongest tier first, then highest probability inside the price window
     top5: dict[str, list[dict]] = {}
-    rank = {"official-model": 0, "crowd-consensus": 1, "no-basis": 2}
+    rank = {"official-model": 0, "quoted-market": 1, "crowd-consensus": 2, "no-basis": 3}
     conf_rank = {"high": 0, "medium": 1, "low": 2, None: 3}
     for sport in BRIEF_SPORTS:
-        rows = [e for e in out_events if e["sport"] == sport and e.get("pick")]
+        rows = [e for e in out_events if e["sport"] == sport and e.get("pick")
+                and e.get("kind", "match") == "match"]
         rows.sort(key=lambda e: (rank.get(e["tier"], 3),
                                  conf_rank.get(e["pick"]["confidence"], 3),
                                  0 if e["pick"]["in_band"] else 1,
@@ -612,6 +627,8 @@ def main() -> int:
             "events": len(out_events),
             "tips": len(tips),
             "expired_tips_excluded": len(expired),
+            "matches": sum(1 for e in out_events if e.get("kind", "match") == "match"),
+            "outrights": sum(1 for e in out_events if e.get("kind") == "outright"),
             "olbg_pages": pages,
             "text_sources": {s: v[1] for s, v in corpora.items()},
             "ratings": {
@@ -655,7 +672,7 @@ def main() -> int:
         "verified": sum(1 for e in out_events if e["official_verified"]),
         "total": len(out_events),
         "tiers": {t: sum(1 for e in out_events if e["tier"] == t)
-                  for t in ("official-model", "crowd-consensus", "no-basis")},
+                  for t in ("official-model", "quoted-market", "crowd-consensus", "no-basis")},
         "wta_players_parsed": len(wta),
         "f1_drivers_parsed": len(f1),
         "failures": [{"key": k, "status": c.get("http_status"), "url": c.get("url"),

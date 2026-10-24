@@ -160,11 +160,17 @@ def verified(v) -> str:
     return '<span class="pill ok">official</span>' if v else '<span class="pill warn">OLBG only</span>'
 
 
-def by_sport() -> dict[str, list[dict]]:
+def by_sport(kind: str = "match") -> dict[str, list[dict]]:
     out: dict[str, list[dict]] = {s: [] for s in SPORTS}
     for ev in MODEL["events"]:
+        if ev.get("kind", "match") != kind:
+            continue
         out.setdefault(ev["sport"], []).append(ev)
     return out
+
+
+def outrights() -> list[dict]:
+    return [ev for ev in MODEL["events"] if ev.get("kind") == "outright"]
 
 
 def olbg_link(ev: dict) -> str:
@@ -222,12 +228,13 @@ def ranked_picks() -> list[dict]:
 
 
 def summary_stats() -> dict:
-    evs = MODEL["events"]
+    evs = [x for x in MODEL["events"] if x.get("kind", "match") == "match"]
     picks = [x for x in evs if x.get("pick")]
     high = [x for x in picks if x["pick"]["confidence"] == "high"]
     inband_high = [x for x in high if x["pick"]["in_band"]]
     return {
         "events": len(evs),
+        "outrights": len(outrights()),
         "sports": len({x["sport"] for x in evs if x.get("pick")}) if picks else 0,
         "picks": len(picks),
         "high": len(high),
@@ -276,7 +283,8 @@ def build_index(root: str = "") -> str:
     meta = MODEL["meta"]
     cards = f"""
 <div class="cards">
-  <div class="card"><div class="n">{st['events']}</div><div class="l">OLBG fixtures in scope</div></div>
+  <div class="card"><div class="n">{st['events']}</div><div class="l">OLBG matches in scope</div></div>
+  <div class="card"><div class="n">{st['outrights']}</div><div class="l">outright markets kept separate</div></div>
   <div class="card"><div class="n">{st['picks']}</div><div class="l">graded selections</div></div>
   <div class="card"><div class="n">{st['high']}</div><div class="l">high confidence</div></div>
   <div class="card"><div class="n">{st['inband_high']}</div><div class="l">high and inside -250…+10000</div></div>
@@ -311,9 +319,32 @@ labelled high, and says so in the basis column.</p>
 <tbody>{coverage_rows(root)}</tbody></table></div>
 <p class="small">A prediction count below five is a shortfall that is explained on
 <a href="{root}flagged.html">Flagged for review</a>, not hidden.</p>
+{outright_block(root)}
 {shortfall_note(root)}
 """
     return page("Executive summary", body, here, root)
+
+
+def outright_block(root: str) -> str:
+    rows = outrights()
+    if not rows:
+        return ""
+    body = "".join(
+        "<tr>"
+        f"<td>{e(x['sport'])}</td><td>{e(x['name'])}</td>"
+        f"<td>{e(x['primary_tip']['selection'])}</td>"
+        f"<td class='num'>{pct((x.get('pick') or {}).get('probability'))}</td>"
+        f"<td class='num'>{am((x.get('pick') or {}).get('fair_american'))}</td>"
+        f"<td>{pill((x.get('pick') or {}).get('confidence'))}</td>"
+        f"<td>{olbg_link(x)}</td>"
+        "</tr>" for x in rows
+    )
+    return ("<h2>Outright markets (not matches)</h2>"
+            "<p class='lead'>OLBG also lists season and tournament outrights. They are shown here "
+            "so nothing is hidden, but they are excluded from the match counts above.</p>"
+            "<div class='scroll'><table><thead><tr><th>Sport</th><th>Market</th><th>Selection</th>"
+            "<th class='num'>Our chance</th><th class='num'>Our price</th><th>Confidence</th>"
+            f"<th>Source</th></tr></thead><tbody>{body}</tbody></table></div>")
 
 
 def shortfall_note(root: str) -> str:

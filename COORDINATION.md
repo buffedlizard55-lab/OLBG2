@@ -5091,3 +5091,44 @@ with the exact URL that failed. The five-per-sport target is met for Ice Hockey 
 | CL6 | Clean `/clarity/` GitHub Pages dashboard (`index.html`, `picks.html`, `predictions.html`, `matches.html`, `lines.html`, `band.html`, `olbg.html`, `repo-review.html`, `flagged.html`, `sources.html`, `methodology.html`, `sports/index.html`, 15 `sports/<slug>.html`, `assets/style.css`, `assets/app.js`) + strict line-by-line verifier + unit tests | unclaimed→this session | `arena/2e0fc430-olbg2` | `scripts/clarity_build.py`, `scripts/clarity_verify.py`, `clarity/**`, `tests/test_clarity_2e0fc430.py` |
 | CL7 | Rebase onto `origin/main`, run full repo test suite + `integration_audit.py`, open PR → `main`, merge PR, confirm GitHub Pages deployment, and record PR & merge result in `COORDINATION.md` | unclaimed→this session | `arena/2e0fc430-olbg2` | `COORDINATION.md` (append-only) |
 
+
+### CL1–CL6 COMPLETE — `/clarity/` 2026-10-24 fifteen-sport desk (session `arena/2e0fc430-olbg2`)
+
+| # | Task | Status | Evidence |
+|---|---|---|---|
+| CL1 | Claim + concurrency scan | done | this file, commit `1066e7e` |
+| CL2 | OLBG reverse engineering + repo review | done | `research/clarity-2e0fc430.md`, `data/clarity/repo_audit.json` (7 findings), `clarity/olbg.html`, `clarity/repo-review.html` |
+| CL3 | Official verification capture | done | `scripts/clarity_seed.py`, `data/clarity/fixtures.json` (50 fixtures, 245 per-fact citations), `data/clarity/sources.json` (52 official endpoints) |
+| CL4 | Multi-market origination + confidence + odds band | done | `scripts/clarity_model.py`, `scripts/clarity_models.py`, `data/clarity/{matches,lines,picks}.json` — 239 originated selections, 41 graded picks, 12 high, all picks inside −250…+10000 |
+| CL5 | Written predictions | done | `scripts/clarity_predictions.py`, `data/clarity/predictions.json` — 31 write-ups across 11 sports, minimum 63 words, zero occurrences of `model`/`verified`, every high-confidence pick covered |
+| CL6 | Dashboard + verifier + tests | done | `scripts/clarity_build.py` (27 pages), `scripts/clarity_verify.py` (2,828 assertions, 0 failures), `tests/test_clarity_2e0fc430.py` (20 tests, byte-identical rebuild) |
+
+**Scope discipline.** Only `clarity/**`, `data/clarity/**`, `scripts/clarity_*.py`, `tests/test_clarity_2e0fc430.py`,
+`research/clarity-2e0fc430.md` and append-only edits to this file were touched. Two exceptions, both required
+to keep hosted CI green and both produced by another session's own unmodified scripts:
+
+1. `data/ledger/repo_review.json` and `ledger/repo-review.html` were regenerated with
+   `scripts/ledger_report.py` + `scripts/ledger_build.py` because that report counts top-level directories
+   containing an `index.html`; adding `/clarity/` moves the count from 43 to 44. No ledger prose was edited.
+2. Nothing else outside the claim list was modified.
+
+**Cross-session requests still open.**
+- Root navigation: `clarity/index.html` is live at its direct Pages URL but is not yet linked from the root
+  landing page. The root is owned by the active sessions `arena/9f69ce85-olbg2` and `arena/03e61ed8-olbg2`;
+  their claims were under 60 minutes old throughout this session, so this session did not edit `index.html`,
+  `scripts/build_site.py`, `README.md` or `.github/workflows/pages.yml`.
+- CI wiring: `pages.yml` does not yet rebuild `/clarity/`. The layer is deterministic and its test module
+  reproduces and compares it byte for byte on every run, so drift is caught by the test suite; adding the
+  six rebuild steps plus the drift paths would make it explicit.
+
+**Findings handed back to owning sessions (published on `/clarity/flagged.html` and `/clarity/repo-review.html`).**
+
+| ID | Finding | Owner |
+|---|---|---|
+| CR-01 | 95 reader-facing prediction texts in 12 `data/**/predictions*.json` files use the brief's banned vocabulary (`model`, `verified`) | atlas, board, daily, daily-audit, final, forward, hub, root `data/predictions.json`, relay, vanguard, verified |
+| CR-02 | Aussie Rules and eSports rows inside exact-15-sport desks (`data/atlas`, `data/beacon`, `data/canon`, `data/command`, `data/portal`, `data/slate`, `data/vanguard`) | those sessions |
+| CR-03 | The "future-only" desk still prices started fixtures: 17 fixtures with a past start carry 212 selections and 20 picks (`data/zenith`) | `arena/110cf432-olbg2` |
+| CR-04 | 4 merge-conflict marker lines in `COORDINATION.md` | board owners |
+| CR-05 | Stale RR-03 text in `data/ledger/repo_review.json` describing a root timestamp that has changed | `arena/41b3bae5-olbg2` |
+| CR-06 | 44 overlapping dashboards for the same brief | root integrators |
+| CR-07 | OLBG renders times in US Eastern (re-confirmed: handball "14:00" = 20:00 CEST) | informational |

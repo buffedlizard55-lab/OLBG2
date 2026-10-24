@@ -40,7 +40,21 @@ jobs:
         run: python scripts/livedesk_collect.py
 
       - name: Build the desk model from the captures
-        run: python scripts/livedesk_model.py
+        id: model
+        continue-on-error: true
+        run: |
+          set +e
+          python scripts/livedesk_model.py > /tmp/model.log 2>&1
+          code=$?
+          cat /tmp/model.log
+          {
+            echo "exit_code=$code"
+            echo "--- python ---"
+            python --version
+            echo "--- tail of model log ---"
+            tail -n 80 /tmp/model.log
+          } > data/live_desk/model-debug.txt
+          exit 0
 
       - name: Upload the raw bodies for offline parsing
         uses: actions/upload-artifact@v4
@@ -50,10 +64,11 @@ jobs:
           retention-days: 30
 
       - name: Commit the manifest and model back to this branch
+        if: always()
         run: |
           git config user.name "livedesk-capture"
           git config user.email "livedesk-capture@users.noreply.github.com"
-          git add data/live_desk/captures/manifest.json data/live_desk/model.json data/live_desk/digest.json
+          git add data/live_desk/captures/manifest.json data/live_desk/model.json data/live_desk/digest.json data/live_desk/model-debug.txt || true
           if git diff --cached --quiet; then
             echo "no change"
             exit 0

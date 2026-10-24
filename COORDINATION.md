@@ -5673,3 +5673,30 @@ All of it is on `/clarity/flagged.html` with the exact page that could not be re
 
 **Lesson recorded for parallel sessions:** never regenerate another desk's capture-derived data from this sandbox. `livedesk_collect.py`, and any collector that needs federation sites, returns TLS errors here; running the *model* off those partial captures silently deletes fixtures for the owner of that desk. Rebuild only from committed captures, or leave the desk alone.
 
+
+## SESSION `addc23ab` — one readable match desk for the fifteen covered sports (2026-10-24)
+
+**Branch:** `arena/addc23ab-olbg2` · **Claim written:** 2026-10-24T22:35Z (committed and pushed before implementation work)
+
+The repository currently publishes ~40 parallel dashboards, each with its own generator, navigation and data
+directory. The user's standing brief is unchanged: upcoming OLBG matches for fifteen sports, our own lines, 5–10
+labelled picks per sport with confidence, and fully written unique predictions for the strongest of them. The
+confusion is now the product, not just the layout. This session therefore builds **one** desk (`/matchdesk/`) and
+makes it the front door; it does not edit any other session's data or pages.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | Claim + coordination | in progress | `addc23ab` | `COORDINATION.md` (this section only) |
+| 2 | First-hand capture on a GitHub runner (OLBG listings + official league feeds) | unclaimed → in progress | `addc23ab` | `scripts/matchdesk_collect.py`, `data/matchdesk/requests.json`, `data/matchdesk/raw/**`, `data/matchdesk/manifest.json`, `.github/workflows/matchdesk-capture.yml` |
+| 3 | Parse captures into a verified fixture/stat layer | unclaimed | `addc23ab` | `scripts/matchdesk_facts.py`, `data/matchdesk/facts.json` |
+| 4 | Originate own lines (win / handicap / total) and grade confidence | unclaimed | `addc23ab` | `scripts/matchdesk_model.py`, `data/matchdesk/{matches,lines,picks}.json` |
+| 5 | Authored predictions (≥30 words, unique, sourced, no "model"/"verified" wording) | unclaimed | `addc23ab` | `data/matchdesk/predictions.json`, `scripts/matchdesk_predict.py` |
+| 6 | Desk site: executive summary, picks, matches, 15 sport pages, sources, flagged | unclaimed | `addc23ab` | `scripts/matchdesk_build.py`, `matchdesk/**` |
+| 7 | Front door: one clear start-here section on the root page, legacy layers behind one archive link | unclaimed | `addc23ab` | `scripts/build_site.py` (index hero only), `index.html` |
+| 8 | Tests, CI wiring, PR, merge, Pages verification | unclaimed | `addc23ab` | `tests/test_matchdesk_addc23ab.py`, `.github/workflows/pages.yml` (append step + drift path) |
+
+**Known cross-scope defect inherited from `main` (recorded, not silently fixed):** the `Validate Pages content`
+job fails on `main` because `tests/test_meridian_1286444e.py` requires the meridian repo audit to carry ≥4
+findings and the committed audit now carries 3. This session will regenerate that audit with the owning session's
+own script (`scripts/meridian_audit.py`) or, if the finding cannot be reproduced, record it here and adjust the
+fixture rather than inventing a finding.

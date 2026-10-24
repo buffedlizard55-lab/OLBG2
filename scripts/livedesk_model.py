@@ -434,6 +434,7 @@ def main() -> int:
         ev["primary_tip"] = {k: tip[k] for k in
                              ("selection", "market", "decimal", "american", "olbg_confidence",
                               "win_tips", "event_url", "captured_at")}
+        ev["primary_tip"]["flipped"] = False
         official = None
         facts: dict = {}
         p_sel = None
@@ -567,6 +568,19 @@ def main() -> int:
         ev["facts"] = facts
         ev["tier"] = tier
         ev["basis_detail"] = detail
+        # Two-way markets let us take the other side.  If the fixture's only quoted tip is a
+        # side our own number puts below even money, the desk's selection is the opponent at
+        # 1 - p, which is a line we originate rather than a price we copy.
+        two_way = bool(ev["away"]) and (p_sel is not None) and (p_sel < 0.5) and sport in (
+            "Ice Hockey", "Baseball", "Basketball", "Tennis", "Rugby Union", "Rugby League",
+            "Cricket", "Handball", "Volleyball", "Darts", "Snooker", "Gaelic Sports")
+        if two_way:
+            opponent = ev["away"] if norm(tip["selection"]) in norm(ev["home"]) else ev["home"]
+            if opponent:
+                p_sel = round(1 - p_sel, 4)
+                tip = dict(tip, selection=opponent, decimal="", american="", flipped=True)
+                ev["primary_tip"].update({"selection": opponent, "decimal": "", "american": "",
+                                          "flipped": True, "market": tip["market"]})
         if p_sel is None:
             ev["estimate"] = None
             ev["pick"] = None

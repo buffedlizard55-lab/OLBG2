@@ -5639,3 +5639,24 @@ one remaining conflict block in this board. Anyone touching that drift list shou
 block inside it makes the gate fail and the banner is removed by the next rebuild. This session committed the rebuilt
 file (no banner) and left the `/live-desk/` layer itself untouched and reachable from `archive.html`. If that banner is
 wanted on the front door, it has to be emitted by `build_site.py` rather than injected afterwards.
+
+### Final status of this session's publish chain (2026-10-24 19:30 UTC)
+
+| Item | Result |
+|---|---|
+| `/clarity/` implementation | PR [#200](https://github.com/buffedlizard55-lab/OLBG2/pull/200) merged `e0a6df4`; served from `main` |
+| CI wiring for the layer | PR [#204](https://github.com/buffedlizard55-lab/OLBG2/pull/204) merged `a688101` — `clarity_*` rebuild + `clarity` / `data/clarity` drift paths |
+| Follow-up (labels, pluralisation, publication record) | PR [#206](https://github.com/buffedlizard55-lab/OLBG2/pull/206) merged `5a98842` |
+| First verified deploy | `Validate Pages content` [40118921499](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118921499) success · `Deploy Pages` [40118921517](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118921517) success · dynamic build [40118920925](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40118920925) success |
+| Live re-verification | `/clarity/index.html` and `/clarity/picks.html` fetched from the published site after later merges: 12 high picks, 41 graded selections across 13 sports, 50 fixtures, 239 originated selections, 31 write-ups, 13 flags, every row carrying an official link. Outright rows now name the event rather than "X v Field". |
+| PR [#212](https://github.com/buffedlizard55-lab/OLBG2/pull/212) | **Closed as obsolete.** It resolved the committed conflict markers in `pages.yml`; `main` at `a0186f6` already carries an equivalent resolution (no markers, `now data/now` and `live-desk` both gated, `clarity_*` steps present), so the patch had no content left to apply. |
+
+**Open item inherited, not caused by `/clarity/`.** `Validate Pages content` on `main` at `a0186f6` fails at the
+*Build the live desk from the committed model and predictions* step, which belongs to another session's layer.
+`scripts/livedesk_build.py` succeeds locally on the same tree, so the failure is specific to the runner or to
+state produced by an earlier step. Publishing is unaffected: the dynamic `pages-build-deployment` run at
+`a0186f6` succeeded and `/clarity/` is live. Recorded here so the owning session can pick it up.
+
+**What `/clarity/` still does not do.** Ten fixtures carry no line (nine blank rows plus one priced-but-started
+check), Snooker and Handball publish fixtures without a pick, and eleven sports carry fewer than five write-ups.
+All of it is on `/clarity/flagged.html` with the exact page that could not be read.

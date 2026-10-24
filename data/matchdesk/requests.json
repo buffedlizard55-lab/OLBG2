@@ -631,6 +631,181 @@
    "sport": "Volleyball",
    "kind": "schedule",
    "note": "Lega Volley Italy"
+  },
+  {
+   "key": "ice_shl_schedule",
+   "url": "https://www.shl.se/schedule",
+   "sport": "Ice Hockey",
+   "kind": "probe",
+   "note": "SHL schedule probe"
+  },
+  {
+   "key": "ice_liiga_schedule",
+   "url": "https://liiga.fi/en/schedule",
+   "sport": "Ice Hockey",
+   "kind": "probe",
+   "note": "Liiga schedule probe"
+  },
+  {
+   "key": "ice_del_schedule",
+   "url": "https://www.penny-del.org/spielplan",
+   "sport": "Ice Hockey",
+   "kind": "probe",
+   "note": "DEL schedule probe"
+  },
+  {
+   "key": "ice_nl_schedule",
+   "url": "https://www.nationalleague.ch/game-center",
+   "sport": "Ice Hockey",
+   "kind": "probe",
+   "note": "Swiss NL game center probe"
+  },
+  {
+   "key": "icc_api_1",
+   "url": "https://www.icc-cricket.com/api/rankings/team?gender=mens&format=odi",
+   "sport": "Cricket",
+   "kind": "probe",
+   "note": "ICC rankings API probe 1"
+  },
+  {
+   "key": "icc_api_2",
+   "url": "https://api.icc-cricket.com/rankings/team?gender=mens&format=odi",
+   "sport": "Cricket",
+   "kind": "probe",
+   "note": "ICC rankings API probe 2"
+  },
+  {
+   "key": "wta_api",
+   "url": "https://api.wtatennis.com/tennis/players/rankings/singles?page=0&pageSize=100",
+   "sport": "Tennis",
+   "kind": "probe",
+   "note": "WTA rankings API probe"
+  },
+  {
+   "key": "atp_api",
+   "url": "https://www.atptour.com/-/tennis/rankings/singles/current",
+   "sport": "Tennis",
+   "kind": "probe",
+   "note": "ATP rankings API probe"
+  },
+  {
+   "key": "prem_api",
+   "url": "https://www.premrugby.com/api/fixtures",
+   "sport": "Rugby Union",
+   "kind": "probe",
+   "note": "Premiership fixtures API probe"
+  },
+  {
+   "key": "prem_api2",
+   "url": "https://api.premrugby.com/v1/fixtures",
+   "sport": "Rugby Union",
+   "kind": "probe",
+   "note": "Premiership fixtures API probe 2"
+  },
+  {
+   "key": "gaa_wp",
+   "url": "https://www.gaa.ie/wp-json/wp/v2/pages?per_page=20",
+   "sport": "Gaelic Sports",
+   "kind": "probe",
+   "note": "GAA WordPress API probe"
+  },
+  {
+   "key": "pdc_wp",
+   "url": "https://www.pdc.tv/wp-json/wp/v2/pages?per_page=20",
+   "sport": "Darts",
+   "kind": "probe",
+   "note": "PDC WordPress API probe"
+  },
+  {
+   "key": "wst_wp",
+   "url": "https://www.wst.tv/wp-json/wp/v2/pages?per_page=20",
+   "sport": "Snooker",
+   "kind": "probe",
+   "note": "WST WordPress API probe"
+  },
+  {
+   "key": "f1_api",
+   "url": "https://www.formula1.com/en/results/2026/drivers/race-result",
+   "sport": "Motor Racing",
+   "kind": "probe",
+   "note": "F1 results probe"
+  },
+  {
+   "key": "ehf_json",
+   "url": "https://www.eurohandball.com/api/calendar?season=2026",
+   "sport": "Handball",
+   "kind": "probe",
+   "note": "EHF calendar API probe"
+  },
+  {
+   "key": "cev_json",
+   "url": "https://www.cev.eu/api/competitions",
+   "sport": "Volleyball",
+   "kind": "probe",
+   "note": "CEV API probe"
+  },
+  {
+   "key": "gbgb_api",
+   "url": "https://www.gbgb.org.uk/api/racing/today",
+   "sport": "Greyhounds",
+   "kind": "probe",
+   "note": "GBGB API probe"
+  },
+  {
+   "key": "dpwt_api",
+   "url": "https://www.europeantour.com/api/schedule",
+   "sport": "Golf",
+   "kind": "probe",
+   "note": "DP World Tour API probe"
+  },
+  {
+   "key": "pga_api",
+   "url": "https://www.pgatour.com/api/schedule",
+   "sport": "Golf",
+   "kind": "probe",
+   "note": "PGA TOUR API probe"
+  },
+  {
+   "key": "csa_fixtures",
+   "url": "https://cricket.co.za/fixtures",
+   "sport": "Cricket",
+   "kind": "probe",
+   "note": "Cricket South Africa fixtures probe"
+  },
+  {
+   "key": "nba_espn_standings",
+   "url": "https://site.api.espn.com/apis/v2/sports/basketball/nba/standings",
+   "sport": "Basketball",
+   "kind": "standings",
+   "note": "ESPN NBA standings (secondary source)"
+  },
+  {
+   "key": "nba_espn_sched_25",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261025",
+   "sport": "Basketball",
+   "kind": "schedule",
+   "note": "ESPN NBA scoreboard 25 Oct (secondary)"
+  },
+  {
+   "key": "nba_espn_sched_26",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261026",
+   "sport": "Basketball",
+   "kind": "schedule",
+   "note": "ESPN NBA scoreboard 26 Oct (secondary)"
+  },
+  {
+   "key": "mlb_roster_ws",
+   "url": "https://statsapi.mlb.com/api/v1/teams/158/roster?rosterType=active",
+   "sport": "Baseball",
+   "kind": "roster",
+   "note": "MLB active roster probe"
+  },
+  {
+   "key": "tennis_wta_players",
+   "url": "https://www.wtatennis.com/players/rankings/singles",
+   "sport": "Tennis",
+   "kind": "probe",
+   "note": "WTA ranking page probe"
   }
  ]
 }

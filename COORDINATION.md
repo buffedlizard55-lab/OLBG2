@@ -6090,3 +6090,7 @@ from the published site.
   confirmable from the JS-gated official pages; GBGB publishes no online racecard for the 11:04
   Doncaster (OLBG runner list flagged, possibly incomplete).
 - **C8:** PR [#231](https://github.com/buffedlizard55-lab/OLBG2/pull/231) opened from `arena/9f424dec-olbg2`; merge without approval, Pages deploy confirmed, result appended below.
+- **Result:** PR [#231](https://github.com/buffedlizard55-lab/OLBG2/pull/231) merged to `main` at 2026-10-24T23:36:53Z
+  (validate check passed in 1m01s, 918 tests + full rebuild chain, zero drift). Pages deploy run 40143455595
+  `success`; live root page re-read at 23:40Z confirms the /compass/ front door (11 high picks, 83 picks,
+  122 fixtures, 321/303 in-band lines, 56 predictions, 20 flags). Task C8 closed; session `9f424dec` complete.

@@ -5008,10 +5008,10 @@ Current state: PRs #191, #192 and #194 are merged and the filtered desk is live.
 
 | # | Task | Status | Owner | Exclusive file scope |
 |---|---|---|---|---|
-| I1 | Read board, scan remotes, claim, commit + push immediately | in progress | `arena/ba05b5b6-olbg2` | `COORDINATION.md` (append-only) |
-| I2 | Write unique ≥30-word predictions for high-confidence in-band picks lacking them (12 NBA game totals + Leicester Tigers -3.5), each fact carrying an official source URL | unclaimed→this session | `arena/ba05b5b6-olbg2` | `data/cadence/predictions.json` |
-| I3 | Verify prediction facts against official governing-body pages (NBA.com standings/injury report, Premiership Rugby standings, NHL schedule/standings) | unclaimed→this session | `arena/ba05b5b6-olbg2` | `research/ba05b5b6-verification.md` |
-| I4 | Rebuild root landing page as a clean executive dashboard: executive summary, obvious picks table, per-sport category navigation, table format with source links on every row | unclaimed→this session | `arena/ba05b5b6-olbg2` | `index.html`, `assets/style.css`, `scripts/build_site.py` (root landing/nav only) |
+| I1 | Read board, scan remotes, claim, commit + push immediately | done | `arena/ba05b5b6-olbg2` | `COORDINATION.md` (append-only) |
+| I2 | Write unique ≥30-word predictions for high-confidence in-band picks lacking them (12 NBA game totals + Leicester Tigers -3.5), each fact carrying an official source URL | done | `arena/ba05b5b6-olbg2` | `data/cadence/predictions.json` |
+| I3 | Verify prediction facts against official governing-body pages (NBA.com standings/injury report, Premiership Rugby standings, NHL schedule/standings) | done | `arena/ba05b5b6-olbg2` | `research/ba05b5b6-verification.md` |
+| I4 | Rebuild root landing page as a clean executive dashboard: executive summary, obvious picks table, per-sport category navigation, table format with source links on every row | in progress | `arena/ba05b5b6-olbg2` | `index.html`, `assets/style.css`, `scripts/build_site.py` (root landing/nav only) |
 | I5 | Publish Flagged for Review page with open items and the five-per-sport shortfalls (Golf, Greyhounds, Gaelic Sports have no high-confidence pick supported by official facts) | unclaimed→this session | `arena/ba05b5b6-olbg2` | `flagged.html`, `data/cadence/flagged.json` |
 | I6 | Rebuild checks, full test suite, link audit, PR → `main`, merge on green, confirm Pages deploy, record result | unclaimed→this session | `arena/ba05b5b6-olbg2` | shared outputs (integration), `COORDINATION.md` |
 

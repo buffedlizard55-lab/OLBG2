@@ -5696,3 +5696,20 @@ tip counts; governing-body and league pages are the sources for fixture facts an
 published by the current desk links its exact source URL. A value whose official page could not be re-read during this
 session is marked as inherited, with its original capture time, or left blank and placed on the Flagged for Review page.
 No reader-facing prediction uses the words "model" or "verified". No bookmaker odds are copied.
+
+### IN1–IN2 checkpoint — 2026-10-24 22:31 UTC
+
+IN1 is done: the claim above was pushed before implementation. IN2 found the exact reason `main` was red. The
+`Validate Pages content` runs [40126274535](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40126274535)
+and [40131498375](https://github.com/buffedlizard55-lab/OLBG2/actions/runs/40131498375) failed only at the
+full test-suite step; locally, 4 of 850 tests failed. The `/clarity/` and `/meridian/` repository-audit JSON and
+review pages had been committed when the tree held 47 dashboard directories, but `main` now holds 50. Their own
+determinism tests rebuilt the pages and saw the new count. The `/meridian/` audit also dropped from four findings
+to three after the shared board's conflict markers were removed earlier today, so its `>= 4` guard failed.
+
+Repair (no other session's prose or data was rewritten): the audits and review pages were regenerated with their
+own scripts. A real fourth finding, MF-05, was added by a reproducible scan of `data/zenith`: 17 fixtures whose
+published starts had passed still carry originated selections and picks. Its evidence links the exact committed file.
+The `/meridian/` layer was added to the CI rebuild and drift gate so a later merge cannot silently repeat the stale
+audit failure. Clarity's 6 findings and the /now/ desk were unchanged. Focused tests: 59/59 pass; `meridian_verify`
+2,589 assertions / 0 failures; `clarity_verify` 2,828 / 0.

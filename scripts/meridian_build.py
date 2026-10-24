@@ -233,7 +233,7 @@ PGA TOUR leaderboard embeds FanDuel prices, the row is labelled market-implied a
 originated totals.</p><a class="more" href="methodology.html">Method →</a></div>
 <div class="card"><h3>3. Gaps are published</h3><p>Ten fixtures carry no line and say why. Twelve review
 items name the exact page that could not be read.</p><a class="more" href="flagged.html">Flagged for review →</a></div>
-<div class="card"><h3>4. The repo is audited too</h3><p>Four findings from a line-by-line scan of the
+<div class="card"><h3>4. The repo is audited too</h3><p>Every finding from a line-by-line scan of the
 existing layers, including a future-only desk that still prices started games.</p><a class="more" href="repo-review.html">Repo review →</a></div>
 </div>
 """
@@ -632,11 +632,13 @@ def build_repo_review(audit):
     cards = ""
     for f in audit["findings"]:
         ev = json.dumps(f["evidence"], indent=1)[:1200]
+        source = (f'<p class="small"><a href="{e(f["source_url"])}" rel="noopener">Open the source file</a></p>'
+                  if f.get("source_url") else "")
         cards += f"""<div class="card" style="margin:12px 0"><h3>{e(f['id'])} · {e(f['title'])}</h3>
 <p class="small">{badge('high' if f['severity']=='high' else ('medium' if f['severity']=='medium' else 'low'))}</p>
 <p>{e(f['detail'])}</p>
 <details><summary>Evidence</summary><pre class="small" style="white-space:pre-wrap">{e(ev)}</pre></details>
-<p class="small"><strong>Action:</strong> {e(f['action'])}</p></div>"""
+{source}<p class="small"><strong>Action:</strong> {e(f['action'])}</p></div>"""
     body = f"""
 <p class="lede">A line-by-line scan of the checkout this desk was built into, produced by a script so it can
 be re-run. {audit['count']} findings across {audit['layers']} published dashboards.</p>

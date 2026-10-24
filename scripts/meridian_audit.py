@@ -65,6 +65,26 @@ def out_of_scope_sports():
     return hits
 
 
+def zenith_temporal():
+    """Scan a separate desk that advertises future-only picks for expired selections."""
+    path = ROOT / "data" / "zenith" / "matches.json"
+    if not path.exists():
+        return None
+    matches = json.loads(path.read_text(encoding="utf-8"))["matches"]
+    past = [m for m in matches if (m.get("start_utc") or "9999") < NOW]
+    ids = {m["id"] for m in past}
+    lines = json.loads((ROOT / "data" / "zenith" / "lines.json").read_text(encoding="utf-8"))["lines"]
+    picks = json.loads((ROOT / "data" / "zenith" / "picks.json").read_text(encoding="utf-8"))["picks"]
+    return {
+        "file": "data/zenith/matches.json",
+        "past_fixtures": len(past),
+        "lines_on_past": sum(1 for x in lines if x["fixture_id"] in ids),
+        "picks_on_past": sum(1 for x in picks if x["fixture_id"] in ids),
+        "example": [{"id": m["id"], "sport": m["sport"], "start_utc": m["start_utc"]}
+                    for m in past[:3]],
+    }
+
+
 def build():
     findings = []
 
@@ -118,6 +138,21 @@ def build():
                       "sessions and the markers make its history ambiguous.",
             "evidence": [{"file": "COORDINATION.md", "lines": [m[0] for m in marks]}],
             "action": "Left in place; this session appends only.",
+        })
+
+    z = zenith_temporal()
+    if z and z["past_fixtures"]:
+        findings.append({
+            "id": "MF-05", "severity": "high",
+            "title": "A future-only desk still prices matches that had already started",
+            "detail": f"Re-scanning the committed Zenith data at {NOW} finds {z['past_fixtures']} "
+                      f"fixtures whose published start had passed, carrying {z['lines_on_past']} "
+                      f"originated selections and {z['picks_on_past']} picks. Those selections are "
+                      "not actionable now. They are reported, not edited, because that layer belongs "
+                      "to another session.",
+            "evidence": [z],
+            "source_url": "https://github.com/buffedlizard55-lab/OLBG2/blob/main/data/zenith/matches.json",
+            "action": "The current front door excludes started selections from its executive summary.",
         })
 
     out = {"generated_utc": NOW, "count": len(findings), "layers": len(layers), "findings": findings}

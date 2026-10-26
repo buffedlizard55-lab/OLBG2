@@ -6094,3 +6094,24 @@ from the published site.
   (validate check passed in 1m01s, 918 tests + full rebuild chain, zero drift). Pages deploy run 40143455595
   `success`; live root page re-read at 23:40Z confirms the /compass/ front door (11 high picks, 83 picks,
   122 fixtures, 321/303 in-band lines, 56 predictions, 20 flags). Task C8 closed; session `9f424dec` complete.
+
+---
+
+## SESSION `arena/97341659-olbg2` — daily refresh desk `/apex/` (2026-10-26)
+
+**Branch:** `arena/97341659-olbg2` · **Claim written:** 2026-10-26 ~05:20 UTC (pushed before any implementation work)
+
+The `/compass/` desk (2026-10-24, session `9f424dec`) is two days old. This session captures a fresh
+2026-10-26 slate from the same 15 OLBG sport hubs, originates its own lines, grades confidence, writes
+unique predictions, and publishes a new desk at `/apex/` following the `/compass/` pipeline pattern.
+This session does not edit other desks' data or pages.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A1 | Claim + coordination | in progress | `97341659` | `COORDINATION.md` (this section only) |
+| A2 | Fresh OLBG hub capture (15 sports) via fetch tool + official-source capture | unclaimed→`97341659` | `97341659` | `data/apex/captures/**`, `scripts/apex_data_olbg.py`, `scripts/apex_data_fixtures.py` |
+| A3 | Line origination, confidence grading, band test | unclaimed→`97341659` | `97341659` | `scripts/apex_seed.py`, `scripts/apex_model.py`, `data/apex/*.json` |
+| A4 | Written predictions (unique, >=30 words, no banned vocabulary) | unclaimed→`97341659` | `97341659` | `scripts/apex_predictions.py`, `data/apex/predictions.json` |
+| A5 | Desk site build + verify | unclaimed→`97341659` | `97341659` | `apex/**`, `scripts/apex_build.py`, `scripts/apex_verify.py`, `tests/test_apex_97341659.py` |
+| A6 | Front-door takeover + CI wiring (shared scope, per the 9f424dec pattern) | unclaimed→`97341659` | `97341659` | `scripts/build_site.py`, `.github/workflows/pages.yml`, `README.md`, `index.html`, layer-count audits regenerated with owners' scripts |
+| A7 | Integration: full suite, pages.yml replay, PR, merge, Pages confirm | unclaimed→`97341659` | `97341659` | `COORDINATION.md` |

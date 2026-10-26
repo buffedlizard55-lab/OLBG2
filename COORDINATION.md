@@ -6094,3 +6094,30 @@ from the published site.
   (validate check passed in 1m01s, 918 tests + full rebuild chain, zero drift). Pages deploy run 40143455595
   `success`; live root page re-read at 23:40Z confirms the /compass/ front door (11 high picks, 83 picks,
   122 fixtures, 321/303 in-band lines, 56 predictions, 20 flags). Task C8 closed; session `9f424dec` complete.
+
+---
+
+## SESSION `9cf54b86` — fresh 26 October 15-sport slate desk (2026-10-26)
+
+**Branch:** `arena/9cf54b86-olbg2` · **Claim written and pushed before any implementation work.**
+
+Request being served: an up-to-date, self-contained desk for the fifteen covered sports (Golf, Volleyball, Rugby
+Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey,
+Basketball, Rugby League) with its own originated lines, a graded pick per fixture, 5–10 written predictions per
+sport where evidence allows, an executive summary, and a Flagged for Review page. No other session's data or pages
+are edited.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | Claim + coordination | in progress | `9cf54b86` | `COORDINATION.md` (this section only) |
+| 2 | Fresh OLBG capture, all 15 hubs | unclaimed→ | `9cf54b86` | `data/slate26/olbg.json`, `data/slate26/captures/` |
+| 3 | Official-source corroboration for form/stats/injuries | | `9cf54b86` | `data/slate26/sources.json`, `data/slate26/official.json` |
+| 4 | Own-line origination (ML, handicap/line, total) + grading | | `9cf54b86` | `data/slate26/lines.json`, `data/slate26/picks.json` |
+| 5 | Hand-written predictions (>=30 words, unique, no model/verified wording) | | `9cf54b86` | `data/slate26/predictions.json` |
+| 6 | Desk build + verify scripts | | `9cf54b86` | `scripts/slate26_*.py`, `tests/test_slate26_9cf54b86.py` |
+| 7 | Site: `slate26/**` (summary, picks, matches, lines, predictions, 15 sport pages, sources, flagged) | | `9cf54b86` | `slate26/**` |
+| 8 | CI wiring + drift paths (append-only) | | `9cf54b86` | `.github/workflows/pages.yml` |
+| 9 | PR →`main`, merge, Pages deploy verification | | `9cf54b86` | `COORDINATION.md` |
+
+**Shared-scope note.** Root `index.html` is written by `scripts/build_site.py`; if this desk takes the front door the
+change is made there (single writer), logged here, and every pinned test is updated in the same commit.

@@ -6094,3 +6094,36 @@ from the published site.
   (validate check passed in 1m01s, 918 tests + full rebuild chain, zero drift). Pages deploy run 40143455595
   `success`; live root page re-read at 23:40Z confirms the /compass/ front door (11 high picks, 83 picks,
   122 fixtures, 321/303 in-band lines, 56 predictions, 20 flags). Task C8 closed; session `9f424dec` complete.
+
+## Session `arena/82337c84-olbg2` — CLAIM: fresh 26 October OLBG desk (2026-10-26 05:16 UTC)
+
+**Session ID / branch:** `arena/82337c84-olbg2` (fixed by the Arena harness; this session remains on its assigned branch).
+
+**Board and concurrency check:** read the full existing coordination board before editing; starting tree was clean at
+`d299d2a` (`origin/main`). Fetched all published remote branches and listed open PRs. The latest merged current desk is
+`/compass/` (PR #231, 24 October capture). No published task claims a 26 October refresh of its data scope. Open PR #224
+was last updated 2026-10-24 23:18Z and carries an older `/now/` refresh plus shared generated-root changes; the current
+root is already `/compass/` from merged PR #231. That stale root overlap is handed off to this final integration only
+for deterministic regeneration from the refreshed canonical `/compass/` data; no unrelated files from PR #224 are taken.
+Other open PRs (#209, #190, #184, #180, #167, #161) do not claim this refresh scope and are not modified here.
+
+**Exclusive working scope:**
+- `data/compass/**` — first-hand 26 October OLBG captures and official-source fixture records; unknown facts stay blank.
+- `scripts/compass_*.py`, `compass/**`, `tests/test_compass_9f424dec.py` — refresh the existing canonical desk, its deterministic outputs and line-by-line checks.
+- `research/refresh-82337c84.md` — capture timestamps, source-by-source verification log and irregularities.
+- `README.md`, generated `index.html` — update the canonical entry point only after the 26 October dataset is rebuilt; no historical counts are combined.
+- `COORDINATION.md` — append-only claim, handoff, verification and publication records.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| R1 | Claim, inspect board/remotes/open PRs, and push this claim before implementation | done | `arena/82337c84-olbg2` | `COORDINATION.md` (append only) |
+| R2 | Freshly capture OLBG event listings for the exact 15 requested sports; record event IDs, markets, displayed times, hub links and capture time | in progress | `arena/82337c84-olbg2` | `data/compass/olbg.json`, `research/refresh-82337c84.md` |
+| R3 | Check upcoming fixture identity, dates, form, match-specific statistics and injury information against official sources; leave unconfirmed values blank and flag every gap | pending | `arena/82337c84-olbg2` | `data/compass/fixtures.json`, `data/compass/sources.json`, `data/compass/flagged.json`, research log |
+| R4 | Re-originate available markets and confidence only from documented inputs; write unique ≥30-word previews only where the official evidence supports them | pending | `arena/82337c84-olbg2` | `scripts/compass_*.py`, `data/compass/{lines,picks,predictions}.json` |
+| R5 | Rebuild the existing `/compass/` dashboard and its 15 sport pages, update the executive entry point, validate every row/link/preview, and publish shortfalls on Flagged for Review | pending | `arena/82337c84-olbg2` | `compass/**`, `index.html`, `README.md`, tests |
+| R6 | Rebase from `origin/main` before each push, run full tests/build/link audit, open and merge this branch's PR only on green, verify Pages, and record the result | pending | `arena/82337c84-olbg2` | `COORDINATION.md` (append only) |
+
+The five-per-sport figure is a coverage target, not a quota. A sport gets fewer or no picks when OLBG lists fewer eligible
+future events or official match-specific inputs cannot be found. No price, injury, line-up, result, or statistic will be
+filled by inference. Each published selection must be explicitly labeled with market and confidence, and reader-facing
+predictions must not use the words “model” or “verified.”

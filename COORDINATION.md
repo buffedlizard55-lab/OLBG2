@@ -6094,3 +6094,24 @@ from the published site.
   (validate check passed in 1m01s, 918 tests + full rebuild chain, zero drift). Pages deploy run 40143455595
   `success`; live root page re-read at 23:40Z confirms the /compass/ front door (11 high picks, 83 picks,
   122 fixtures, 321/303 in-band lines, 56 predictions, 20 flags). Task C8 closed; session `9f424dec` complete.
+
+---
+## SESSION `23e0c70c` — /tipoff/ desk for Monday 26 October 2026 (CLAIM)
+
+**Session:** `arena/23e0c70c-olbg2` · **Claim written:** 2026-10-26 ~05:20 UTC (pushed before any implementation work)
+
+Fresh Monday desk: re-read all 15 OLBG sport hubs + official league/federation sources on 26 Oct 2026,
+originate own lines, grade confidence, write 5 unique predictions per covered sport (30+ words),
+build one clean dashboard at `/tipoff/` and take over the root front door per the established pattern.
+No other session is active; no claimed scopes overlap. Does not edit any earlier session's files.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| T1 | Claim + coordination | in progress | `23e0c70c` | `COORDINATION.md` (this section only) |
+| T2 | OLBG hub capture (all 15 sports) + official-source capture | unclaimed | `23e0c70c` | `data/tipoff/captures/` |
+| T3 | Fixtures, originated lines, confidence grades | unclaimed | `23e0c70c` | `data/tipoff/*.json`, `scripts/tipoff_seed.py`, `scripts/tipoff_model.py` |
+| T4 | Written predictions (5/sport, 30+ words, unique) | unclaimed | `23e0c70c` | `scripts/tipoff_predictions.py`, `data/tipoff/predictions.json` |
+| T5 | Desk site build (exec summary, picks, matches, sports, lines, sources, flagged) | unclaimed | `23e0c70c` | `tipoff/**`, `scripts/tipoff_build.py`, `scripts/tipoff_verify.py` |
+| T6 | Front-door takeover + archive + README + pages.yml + tests | unclaimed | `23e0c70c` | `index.html`, `archive.html`, `README.md`, `.github/workflows/pages.yml`, `scripts/build_site.py`, `tests/test_tipoff_23e0c70c.py` |
+| T7 | Final integration: full rebuild, full suite, PR, merge, Pages confirm | unclaimed | `23e0c70c` | `COORDINATION.md` |
+

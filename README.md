@@ -1,8 +1,9 @@
 # OLBG2 — one desk: our own lines, confidence-graded picks, written predictions
 
-**Live:** <https://buffedlizard55-lab.github.io/OLBG2/> · the current desk is <https://buffedlizard55-lab.github.io/OLBG2/compass/>
-(24 October 2026, 22:45Z capture: 83 graded picks — 11 high / 32 medium / 40 low — across 13 sports, 56 written
-previews, 321 originated prices of which 303 sit inside −250…+10000, 26 pages)
+**Live:** <https://buffedlizard55-lab.github.io/OLBG2/> · the current desk is <https://buffedlizard55-lab.github.io/OLBG2/slate26/>
+(26 October 2026, 05:05–05:45Z capture: 75 priced matches across ten sports, 9 high / 22 medium /
+44 low, 11 written previews, 75 originated prices of which 64 sit inside
+−250…+10000, 37 flagged items, 26 pages)
 
 This repository publishes a daily research desk for the fifteen OLBG sports in scope: **Golf, Volleyball,
 Rugby Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball,
@@ -17,80 +18,88 @@ on [archive.html](archive.html) and its counts are never added to the current de
 
 | Page | What is on it |
 |---|---|
-| [Executive summary](compass/index.html) | The strongest calls in large type, the counts, and a plain map of where everything lives |
-| [Picks](compass/picks.html) | One row per pick: **selection**, market, our chance, a **0-10 score**, our price, the confidence grade and the official source |
-| [Written predictions](compass/predictions.html) | One unique preview per high and medium pick, each ≥30 words, with the official facts and links beneath it |
-| [All matches](compass/matches.html) | Every fixture, priced or blank, with the reason for any blank |
-| [Our lines](compass/lines.html) | The full market book: match winner, handicap and total for each fixture we can price |
-| [Odds band](compass/band.html) | The −250 to +10000 test, applied to every price we made |
-| [By sport](compass/sports/index.html) | Fifteen category pages, same sections in the same order |
-| [OLBG list](compass/olbg.html) | The 121 rows captured off OLBG's own event list at 22:25–22:45Z, with event ids and hub URLs |
-| [Sources](compass/sources.html) | Every page a value was read from |
-| [Method](compass/methodology.html) | The four pricing families, the confidence rules, the 0-10 score and what is never done |
-| [Flagged for review](compass/flagged.html) | 20 items: OLBG data errors, time corrections, unverified events and coverage notes |
-| [Independent re-check](recheck/index.html) | A separate audit desk that re-derives every price, grade, score and prose rule of the `/now/` desk from committed evidence: 1,246 checks, 0 failures, with the live-reread limits stated on every page |
+| [Executive summary](slate26/index.html) | The counts, the 9 high-confidence picks and a plain map of where everything lives |
+| [Picks](slate26/picks.html) | Sport by sport, numbered 1 to 10: the **selection**, market, our price, our chance, the grade and the OLBG source |
+| [Written predictions](slate26/predictions.html) | 11 previews, each ≥30 words, 2 with official statistics and links beneath |
+| [All matches](slate26/matches.html) | Every OLBG fixture with its displayed time, official UTC start where read, and data grade |
+| [Our lines](slate26/lines.html) | One originated price per fixture, the opposite side where two-way, and how each was built |
+| [Odds band](slate26/band.html) | The −250 to +10000 test on every price, both sides of the window |
+| [By sport](slate26/sports/index.html) | Fifteen category pages, one per covered sport |
+| [Outrights](slate26/outrights.html) | 11 futures markets, kept out of the match count |
+| [Sources](slate26/sources.html) | Every page a value was read from, 13 entries |
+| [Method](slate26/methodology.html) | The two pricing routes, the grading rules, the time convention and what was not available |
+| [Flagged for review](slate26/flagged.html) | 37 items: no-fixture sports, unverified start times and rows with no official statistic |
+| [Independent re-check](recheck/index.html) | A separate audit desk that re-derives every price and grade of the `/now/` desk from committed evidence: 1,246 checks, 0 failures |
 
-## The 24 October 2026 snapshot (22:45Z capture)
+## Earlier desks
+
+Every earlier capture stays published and unchanged; nothing is deleted when a newer desk takes the front door. The
+24 October desk is at [compass/index.html](compass/index.html) — its [picks](compass/picks.html),
+[previews](compass/predictions.html) and [flagged page](compass/flagged.html) still render — and the earlier layers
+(`/now/`, `/latest/`, `/playbook/`, `/recheck/` …) are listed on [archive.html](archive.html).
+
+## The 26 October 2026 snapshot (05:05–05:45Z capture)
 
 | Item | Value |
 |---|---|
-| Upcoming fixtures on the desk | **122** across all 15 sports — 121 OLBG-listed plus the official World Series Game 3 |
-| Prices originated here | **321** (match winner, handicap and total), 303 inside the band |
-| Graded picks | **83** — 11 high, 32 medium, 40 low |
-| Written predictions | **56** across 13 sports, shortest 81 words (high picks), no two openings alike |
-| OLBG listing rows captured | **121** across 12 of the 15 sports (golf, snooker and motor racing showed no tips at capture) |
-| Official sources linked | 36 |
-| Review items | 20 — data errors, time corrections, unverified events and coverage notes |
+| Upcoming fixtures on the desk | **75** across ten sports — every match OLBG's fifteen hubs listed |
+| Prices originated here | **75**, 64 inside the band |
+| Graded picks | **75** — 9 high, 22 medium, 44 low |
+| Written predictions | **11** across five sports, shortest 62 words, no two openings alike |
+| OLBG listing rows captured | **75** across ten of the fifteen sports (Golf and Snooker showed no tips; Darts, Rugby Union and Rugby League showed 2027 outrights only) |
+| Official sources linked | 13 |
+| Review items | 37 — blank start times, missing official statistics and data notes |
 
-Five written predictions per sport is the target, not a quota. On this desk it is met in 13 of the 15 sports;
-Greyhounds, Rugby League and Darts publish every pickable fixture their OLBG lists carry at capture (1, 3 and 4),
-and the remaining gaps (Golf, Snooker and Motor Racing showed no tips at capture) are named on the flagged page
-rather than padded.
+Five written predictions per sport is the target, not a quota, and this desk does not invent fixtures to reach it.
+On 26 October OLBG priced matches in ten of the fifteen sports: Golf and Snooker returned "No tips found." and Darts,
+Rugby Union and Rugby League showed 2027 outrights only, so five sports have no pick at all and say so on their own
+page. Where a match was listed but no official fixture-level feed was readable, the row keeps its price and grade and
+carries no prose; the market-only previews are labelled as such on every card.
 
 ## How the numbers are made
 
-No bookmaker price is read anywhere. Each probability comes from an official rate on the fixture record, through one
-of four documented families — Poisson scoring (ice hockey, baseball), a normal margin (rugby union, rugby league,
-Gaelic games, basketball, tennis), a negative-binomial race to legs (darts), or a five-rung evidence ladder
-(volleyball, handball, cricket and the two rugby league / Gaelic cards). A fair −250 is 71.43%, so a side we rate at
-85% cannot be backed inside the requested band at all; the desk therefore publishes a handicap ladder and puts the
-pick on the line where its number lands nearest 68%.
+No bookmaker price is read anywhere. OLBG's hub pages publish no odds — only the share of tips — so each of the 75
+prices is originated here by one of two documented routes:
 
-Confidence: **high** needs a numeric family, 62% or better and a price inside the band (match totals are capped at
-medium because they carry more variance). **Medium** needs 55%. Everything else is **low** and is published only for
-completeness.
+- **OLBG tip share** (74 rows). The share is shrunk 15% toward a coin flip and capped at 78%, because a popularity poll
+  is not a probability and a unanimous board is not a 92% winner. Rows with fewer than three tips are clamped to 65%.
+- **Official season records** (1 row, Detroit at Edmonton). `logit = 3.6 × (points%home − points%away) + 0.22`, with both
+  records read from the NHL feed that morning.
 
-The **0-10 score** puts that on one scale so sports can be compared without reading a price:
-`score = 10 × our chance × basis shade`, with the shade at 1.0 for a goals or points rate and 0.8 for the evidence
-ladder. 5.0 is a coin flip and no pick can score above 7.5 while the band stops at 71.4%. Every pick on the site
-carries its score, and `scripts/now_verify.py` re-derives it from the probability.
+Confidence: **high** needs a 62% chance or better, at least four tips behind the row, and a price inside −250…+10000.
+**Medium** needs 55% with three tips, or a stronger chance that falls outside the window. Everything else is **low**, and
+every row where OLBG's most-tipped selection is the draw is low by rule.
+
+Written previews come in two labelled tiers: **full** (statistics read from an official governing-body feed, listed with
+links under the preview) and **market** (no official fixture-level feed was readable, so the preview is confined to the
+fixture, the tip sample and our price, and makes no claim about form or availability).
 
 ```sh
-python scripts/compass_seed.py         # OLBG hub capture + official fixture records with provenance
-python scripts/compass_model.py        # originate every market, grade it, apply the band test
-python scripts/compass_predictions.py  # write the previews
-python scripts/compass_build.py        # render the site (27 pages)
-python scripts/compass_verify.py       # line-by-line assertions
-python scripts/build_site.py           # regenerate the root front door and the archive index
+python scripts/slate26_pipeline.py     # captured OLBG listings + official facts -> fixtures, lines, picks, flags
+python scripts/slate26_predictions.py  # the written previews, with the word-count and wording checks
+python scripts/slate26_build.py        # render slate26/ (26 pages) and the root front door
+python scripts/slate26_verify.py       # 1,189 structural checks
+python scripts/build_site.py           # regenerate the root page and the archive index
 python -m unittest discover -s tests
 ```
 
-The pipeline is deterministic: `compass_verify.py` re-renders every page and fails if a single byte changes.
+The pipeline is deterministic: `slate26_verify.py` re-checks every page, link, grade and preview and fails on a broken
+link, a high pick outside the window, a preview under 30 words, a repeated opening or a banned word.
 
 ## Honesty rules
 
 - A value that is not on an official page stays **blank**, and the blank is published with its reason.
 - A source link records where a value was read; it does not prove the page still shows it, and each fact carries its
   own capture time.
-- The fixture facts come from official captures made at 22:25–23:00Z on 24 October; the subset inherited from the
-  17:35Z capture is marked as inherited on every row. All 15 OLBG hubs were re-read live during this session.
+- The OLBG rows come from a single read of all fifteen hubs between 05:05 and 05:45Z on 26 October 2026; the official
+  facts carry their own URL and, where relevant, their own snapshot time.
 - Displayed times are never converted between timezones.
 - The words "model" and "verified" do not appear in reader-facing copy; both are reserved for the internal method and
   are checked by the test suite.
 
 ## Earlier desks
 
-Fifty-four earlier layers are preserved, unmodified and with their own counts, at their own URLs
+Every earlier layer is preserved, unmodified and with its own counts, at its own URL
 (`/today/`, `/master/`, `/cadence/`, `/clarity/`, `/ledger/`, `/brief/`, `/olbg/`, `/atlas/`, and so on).
 They are indexed, generated from the repository itself, on [archive.html](archive.html). Do not add their numbers to
 the current desk's.

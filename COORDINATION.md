@@ -6094,3 +6094,76 @@ from the published site.
   (validate check passed in 1m01s, 918 tests + full rebuild chain, zero drift). Pages deploy run 40143455595
   `success`; live root page re-read at 23:40Z confirms the /compass/ front door (11 high picks, 83 picks,
   122 fixtures, 321/303 in-band lines, 56 predictions, 20 flags). Task C8 closed; session `9f424dec` complete.
+
+---
+
+## SESSION `9cf54b86` — fresh 26 October 15-sport slate desk (2026-10-26)
+
+**Branch:** `arena/9cf54b86-olbg2` · **Claim written and pushed before any implementation work.**
+
+Request being served: an up-to-date, self-contained desk for the fifteen covered sports (Golf, Volleyball, Rugby
+Union, Cricket, Snooker, Darts, Baseball, Gaelic Sports, Greyhounds, Tennis, Motor Racing, Handball, Ice Hockey,
+Basketball, Rugby League) with its own originated lines, a graded pick per fixture, 5–10 written predictions per
+sport where evidence allows, an executive summary, and a Flagged for Review page. No other session's data or pages
+are edited.
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 1 | Claim + coordination | in progress | `9cf54b86` | `COORDINATION.md` (this section only) |
+| 2 | Fresh OLBG capture, all 15 hubs | unclaimed→ | `9cf54b86` | `data/slate26/olbg.json`, `data/slate26/captures/` |
+| 3 | Official-source corroboration for form/stats/injuries | | `9cf54b86` | `data/slate26/sources.json`, `data/slate26/official.json` |
+| 4 | Own-line origination (ML, handicap/line, total) + grading | | `9cf54b86` | `data/slate26/lines.json`, `data/slate26/picks.json` |
+| 5 | Hand-written predictions (>=30 words, unique, no model/verified wording) | | `9cf54b86` | `data/slate26/predictions.json` |
+| 6 | Desk build + verify scripts | | `9cf54b86` | `scripts/slate26_*.py`, `tests/test_slate26_9cf54b86.py` |
+| 7 | Site: `slate26/**` (summary, picks, matches, lines, predictions, 15 sport pages, sources, flagged) | | `9cf54b86` | `slate26/**` |
+| 8 | CI wiring + drift paths (append-only) | | `9cf54b86` | `.github/workflows/pages.yml` |
+| 9 | PR →`main`, merge, Pages deploy verification | | `9cf54b86` | `COORDINATION.md` |
+
+**Shared-scope note.** Root `index.html` is written by `scripts/build_site.py`; if this desk takes the front door the
+change is made there (single writer), logged here, and every pinned test is updated in the same commit.
+
+### Session 9cf54b86 — result (2026-10-26)
+
+| # | Task | Status | Notes |
+|---|---|---|---|
+| 1 | Claim + coordination | done | pushed as `664b0d8` before any implementation work |
+| 2 | Fresh OLBG capture, all 15 hubs | done | 05:05–05:45Z; 75 match rows + 11 outrights; Golf and Snooker returned "No tips found."; Darts/RU/RL showed 2027 outrights only |
+| 3 | Official corroboration | done, partial | NHL schedule + gamecenter + standings, MLB StatsAPI, ÖVV Austrian volleyball fixtures, F1 standings page. No injury feed was readable for any sport |
+| 4 | Own-line origination + grading | done | 75 prices (64 inside −250…+10000); 9 high / 22 medium / 44 low |
+| 5 | Written predictions | done, short of target | 11 previews, 62 words at the shortest: 2 `full` (official statistics) and 9 `market` (no official fixture-level feed readable) |
+| 6 | Desk build + verify + tests | done | `scripts/slate26_{pipeline,predictions,build,verify}.py`; `slate26_verify` 1,189 checks / 0 failures; `tests/test_slate26_9cf54b86.py` 14 tests; full suite **932 tests OK** |
+| 7 | Site | done | `slate26/**` 26 pages: summary, picks, predictions, matches, lines, band, outrights, sources, flagged, method, 15 sport pages |
+| 8 | CI wiring | done | one appended step before the root rebuild + `slate26 data/slate26` added to the drift pathspec |
+| 9 | PR → `main`, merge, Pages | in progress | see below |
+
+**Sources** (all linked per row on `slate26/sources.html`): the fifteen OLBG hubs; `api-web.nhle.com` schedule, gamecenter and
+standings; `statsapi.mlb.com` schedule/probable pitchers; `volleynet.at` (ÖVV) fixture list and match page; `formula1.com`
+2026 driver standings. The ÖVV list is what proves OLBG's hub times are US Eastern — four Austrian fixtures differ by exactly
+five hours, match for match — and that finding is printed on the method page and every flagged row that lacks a UTC time.
+
+**Cross-scope changes, all logged here rather than made quietly:**
+- `scripts/build_site.py`: the 26 October desk now owns the root front door (same single-writer pattern the /playbook/,
+  /now/ and /compass/ sessions used). `importlib.util` was imported at module level. `/compass/` and every earlier desk stay
+  published; the new root links them.
+- `tests/test_integration_f0ee1b4a.py` and `tests/test_publication_counts.py`: the root-content assertions moved from the
+  /compass/ data to `data/slate26` — the same edit earlier sessions made when the front door changed hands.
+- `README.md`: counts, page map and the method section now describe this desk; the compass links stay in an "Earlier desks"
+  block, and the /recheck/ pointer is unchanged.
+- `data/clarity/repo_audit.json`, `clarity/repo-review.html`, `data/meridian/repo_audit.json`,
+  `meridian/repo-review.html`: regenerated by their owners' own scripts (layer count moved 54 → 55 with `slate26/`).
+- `.github/workflows/pages.yml`: one appended step and two drift paths. No existing step was modified.
+
+**Irregularities, published on `slate26/flagged.html` (37 items):**
+1. Five sports had no match: Golf and Snooker ("No tips found."), Darts, Rugby Union and Rugby League (2027 outrights only).
+   The five-a-day target cannot be met there and is not padded with invented fixtures.
+2. 62 of 75 rows carry only the OLBG listing and our price: no official fixture-level feed was readable for those
+   competitions in this session, so they get no prose and are grouped by sport on the flagged page.
+3. No official injury or availability report was captured for any sport, so no preview mentions one.
+4. Kick-off time is blank for 64 rows: OLBG's string is US Eastern (proved), but not an official UTC start for those
+   competitions.
+5. Nine of thirteen handball rows are most-tipped on the draw. Those rows are graded **low** by rule and priced only on the
+   named outcome; the two-team split of a three-way market is not invented.
+6. OLBG's generic `/betting-tips/event/{id}` path renders an empty tips page, so rows link the sport hub and print the event
+   id instead of deep-linking.
+7. The MLB feed lists Freddy Peralta as Tampa Bay's probable starter; that is reproduced as the feed's claim and flagged,
+   not asserted as a roster move.

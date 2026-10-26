@@ -26,9 +26,9 @@ class PublicationCountTests(unittest.TestCase):
         # The root is now the /now/ front door, so its numbers must come from data/now, not from
         # any hand-written sentence. The verified-layer copy it used to carry now lives on the
         # archived pages, which are unchanged.
-        # Front door taken over by the /compass/ desk (session arena/9f424dec-olbg2).
-        now_matches = json.loads((ROOT / "data/compass/fixtures.json").read_text())
-        now_picks = json.loads((ROOT / "data/compass/picks.json").read_text())
+        # Front door taken over by the 26 October desk (session arena/9cf54b86-olbg2).
+        now_matches = json.loads((ROOT / "data/slate26/fixtures.json").read_text())
+        now_picks = json.loads((ROOT / "data/slate26/picks.json").read_text())
         payload = json.loads((ROOT / "data/verified/matches.json").read_text())
         total = len(payload["matches"])
         active_sports = len({row["sport"] for row in payload["matches"]})
@@ -38,8 +38,8 @@ class PublicationCountTests(unittest.TestCase):
         categories = builder.build_sports_index()
         archive = builder.build_archive()
 
-        self.assertIn(f">{now_matches['count']}</div><div class=\"k\">upcoming matches", index)
-        self.assertIn(f">{now_picks['count']}</div><div class=\"k\">picks still to start", index)
+        self.assertIn(f">{now_matches['count']}</div><div class=\"l\">upcoming matches", index)
+        self.assertIn(f">{now_picks['count']}</div><div class=\"l\">picks still to start", index)
         self.assertNotIn("118-row verified layer", index)
         self.assertIn(f"{len(eligible)} eligible OLBG sports. {active_sports} carry rows", categories)
         self.assertIn(f"{total} rows across {active_sports} sports", archive)
@@ -54,10 +54,10 @@ class PublicationCountTests(unittest.TestCase):
 
     def test_readme_describes_the_current_desk_with_data_derived_counts(self):
         """The README leads with the current /now/ desk and quotes its numbers from data/now."""
-        matches = json.loads((ROOT / "data/compass/fixtures.json").read_text())
-        picks = json.loads((ROOT / "data/compass/picks.json").read_text())
-        preds = json.loads((ROOT / "data/compass/predictions.json").read_text())
-        lines = json.loads((ROOT / "data/compass/lines.json").read_text())
+        matches = json.loads((ROOT / "data/slate26/fixtures.json").read_text())
+        picks = json.loads((ROOT / "data/slate26/picks.json").read_text())
+        preds = json.loads((ROOT / "data/slate26/predictions.json").read_text())
+        lines = json.loads((ROOT / "data/slate26/lines.json").read_text())
         readme = (ROOT / "README.md").read_text()
 
         self.assertIn(f"Upcoming fixtures on the desk | **{matches['count']}**", readme)

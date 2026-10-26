@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method — OLBG2 26 October 2026</title>
+<style>
+:root{--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--bg:#f8fafc;--teal:#0d9488;--amber:#b45309;--red:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+a{color:#0f766e}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+header.top{background:#0f172a;color:#fff;padding:14px 0}
+header.top .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+header.top a{color:#cbd5e1;text-decoration:none;font-size:14px;font-weight:600}
+header.top a:hover{color:#fff}
+header.top .brand{color:#fff;font-weight:800;letter-spacing:.02em}
+main{padding:26px 0 60px}
+h1{font-size:30px;line-height:1.2;margin:8px 0 6px}
+h2{font-size:21px;margin:34px 0 10px;border-bottom:2px solid var(--line);padding-bottom:6px}
+h3{font-size:17px;margin:22px 0 8px}
+p.lede{font-size:17px;color:#334155;max-width:78ch}
+.sub{color:var(--mut);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:18px 0}
+.k{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.k .n{font-size:26px;font-weight:800;line-height:1.1}
+.k .l{color:var(--mut);font-size:13px;margin-top:2px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:16px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.card b{display:block;font-size:16px;margin-bottom:4px}
+.card span{color:var(--mut);font-size:14px}
+.card a{text-decoration:none}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f1f5f9;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#475569}
+tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.high{background:#dcfce7;color:#166534}
+.medium{background:#fef3c7;color:#92400e}
+.low{background:#e2e8f0;color:#334155}
+.full{background:#dbeafe;color:#1e40af}
+.market{background:#f1f5f9;color:#475569}
+.flag{background:#fee2e2;color:#991b1b}
+.note{background:#f1f5f9;color:#475569}
+.pick{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:14px;margin:12px 0}
+.pick h3{margin:0 0 6px}
+.pick .meta{color:var(--mut);font-size:13px;margin-bottom:8px}
+.note-box{background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:14px;margin:16px 0}
+.ok-box{background:#ecfdf5;border:1px solid #6ee7b7;border-radius:10px;padding:14px;margin:16px 0}
+footer{border-top:1px solid var(--line);padding:20px 0 50px;color:var(--mut);font-size:13px}
+code{background:#f1f5f9;padding:1px 5px;border-radius:5px;font-size:13px}
+.scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="index.html">OLBG2 · 26 Oct 2026</a><a href="index.html">Summary</a><a href="picks.html">Picks</a><a href="predictions.html">Predictions</a><a href="matches.html">Matches</a><a href="lines.html">Our lines</a><a href="sports/index.html">By sport</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a></div></header>
+<main><div class="wrap">
+
+<h1>Method</h1>
+<p class="lede">Short version: the fixtures come from OLBG, the facts come from governing bodies, the prices are ours,
+and the gaps are printed instead of filled.</p>
+
+<h2>1. Finding the fixtures</h2>
+<p>Each of the fifteen sport hubs was opened in turn (<code>olbg.com/betting-tips/&lt;Sport&gt;/&lt;id&gt;</code>) and the
+tips table read row by row: event name, competition label, displayed time, market, the most-tipped selection, the tip
+count as <code>n/m</code> and OLBG's own percentage. Those ten fields are the only things taken from OLBG. No odds are
+published on the hub, so no bookmaker price was copied anywhere on this site.</p>
+
+<h2>2. Originating a price</h2>
+<p>Two routes, printed on every line row:</p>
+<ul>
+<li><b>OLBG tip share</b> (74 rows). The share <code>s</code> is shrunk 15% toward a coin flip:
+<code>p = 0.5 + 0.85 × (s − 0.5)</code>, and capped at 78%. A share is a popularity poll, not a probability, and both the
+shrinkage and the cap are the allowance for that: a unanimous board is not a 92% winner. Rows with fewer than three tips
+are clamped further, to 65%, because one tip reads 100% and would otherwise price as a −1233 favourite.</li>
+<li><b>Official season records</b> (1 row, Detroit at Edmonton). With both records read from the NHL feed:
+<code>logit = 3.6 × (points%home − points%away) + 0.22</code>, <code>p = 1/(1+e^−logit)</code>. The 3.6 weight and the
+0.22 home-ice term are this desk's own choices and are stated here so the number can be argued with.</li>
+</ul>
+<p>The American price follows from the probability (<code>−100p/(1−p)</code> above even money, <code>100(1−p)/p</code>
+below). Two-way markets also get the opposite side.</p>
+
+<h2>3. Grading a pick</h2>
+<ul>
+<li><b>high</b> — our chance at least 62%, at least four tips behind the row, and the price inside −250 to +10000.</li>
+<li><b>medium</b> — our chance at least 55% with at least three tips, or a high chance that falls outside the window.</li>
+<li><b>low</b> — everything else, including every row where OLBG's most-tipped selection is the draw.</li>
+</ul>
+
+<h2>4. Writing the previews</h2>
+<p>Two tiers appear on every prediction card. <b>Full</b> means the text quotes statistics read from an official feed
+that day and the facts are listed under the preview with their links. <b>Market</b> means no official fixture-level feed
+was readable for that competition: the preview then confines itself to the fixture, the OLBG tip sample and our price,
+and makes no claim about form, recent results or availability. Every preview is at least 30 words, none repeats another's
+opening, and the words “model” and “verified” are kept out of reader-facing copy — the checks run in
+<code>scripts/slate26_predictions.py</code>.</p>
+
+<h2>5. Times</h2>
+<p>OLBG's displayed time is US Eastern. The proof is on the desk: four Austrian Volley League matches read
+11:30/12:30/13:00/14:00 on OLBG and 16:30/17:30/18:00/19:00 CET on the federation's own fixture list, exactly five hours
+apart on every row. The three NHL rows carry a further +7 minute display offset against the official puck drop. The UTC
+column is filled only from an official feed and is left blank otherwise.</p>
+
+<h2>6. What was not available</h2>
+<ul>
+<li>No official injury or availability feed was readable for any of the fifteen sports. No preview mentions one.</li>
+<li>Golf and Snooker showed no tips at all; Darts, Rugby Union and Rugby League showed 2027 outrights only. Five sports
+therefore have no fixture, no pick and no preview.</li>
+<li>Basketball, tennis, handball, volleyball (outside Austria) and cricket had no readable official fixture-level feed in
+this session, so those rows carry a price and a grade but no statistical preview.</li>
+<li>OLBG's generic event path <code>/betting-tips/event/&lt;id&gt;</code> renders an empty page, so rows link the sport hub
+and print the event id instead of deep-linking.</li>
+</ul>
+
+</div></main>
+<footer><div class="wrap">
+<p>OLBG2 · fifteen-sport desk captured 2026-10-26T05:45Z · every row links the source it came from ·
+<a href="flagged.html">Flagged for Review</a> · <a href="methodology.html">Method</a> ·
+<a href="../archive.html">every earlier desk</a></p>
+</div></footer>
+</body>
+</html>

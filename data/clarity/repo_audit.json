@@ -1,7 +1,7 @@
 {
  "generated_utc": "2026-10-24T17:35:00Z",
  "count": 6,
- "layers": 54,
+ "layers": 55,
  "findings": [
   {
    "id": "CR-01",
@@ -262,7 +262,7 @@
   {
    "id": "CR-06",
    "severity": "medium",
-   "title": "54 separate dashboards publish an overlapping 15-sport brief",
+   "title": "55 separate dashboards publish an overlapping 15-sport brief",
    "detail": "Each directory publishes its own dashboard with its own counts. A reader landing on any one of them sees a different total for the same day. This desk adds /clarity/ as an explicitly dated 2026-10-24 snapshot and states its counts on every page header rather than implying it supersedes the others.",
    "evidence": [
     {
@@ -312,6 +312,7 @@
       "signal",
       "site",
       "slate",
+      "slate26",
       "sports",
       "summit",
       "survey",
@@ -322,7 +323,7 @@
       "verified",
       "zenith"
      ],
-     "count": 54
+     "count": 55
     }
    ],
    "action": "Root integration request recorded in COORDINATION.md."

@@ -11,6 +11,7 @@ Outputs (all deterministic):
 from __future__ import annotations
 
 import html
+import importlib.util
 import json
 import re
 from collections import Counter, defaultdict
@@ -1859,6 +1860,15 @@ def main() -> None:
     # archive.html, with their own counts never added to this desk's.
     if (COMPASS / "fixtures.json").is_file():
         (ROOT / "index.html").write_text(build_compass_front_door(), encoding="utf-8")
+    # The 26 October desk (session arena/9cf54b86-olbg2) is now the newest layer and owns the front
+    # door; /compass/ and every earlier desk stay published and are reachable from the new page and
+    # from archive.html. Counts are never added across desks.
+    slate_script = ROOT / "scripts" / "slate26_build.py"
+    if slate_script.is_file() and (ROOT / "data" / "slate26" / "fixtures.json").is_file():
+        spec = importlib.util.spec_from_file_location("slate26_build_for_root", slate_script)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        (ROOT / "index.html").write_text(mod.write_front_door(), encoding="utf-8")
     (ROOT / "matches.html").write_text(build_matches(), encoding="utf-8")
     (ROOT / "verification.html").write_text(build_verification(), encoding="utf-8")
     (ROOT / "picks.html").write_text(build_picks(), encoding="utf-8")

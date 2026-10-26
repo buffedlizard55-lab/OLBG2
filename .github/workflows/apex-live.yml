@@ -13,6 +13,7 @@ on:
     paths:
       - "data/apex/requests.json"
       - "scripts/apex_collect.py"
+      - "scripts/apex_parse.py"
       - ".github/workflows/apex-live.yml"
 
 permissions:
@@ -38,6 +39,9 @@ jobs:
       - name: Capture OLBG listings and official pages
         run: python scripts/apex_collect.py
 
+      - name: Parse the captures into the compact committed digest
+        run: python scripts/apex_parse.py
+
       - name: Upload the raw bodies for offline parsing
         uses: actions/upload-artifact@v4
         with:
@@ -45,12 +49,12 @@ jobs:
           path: data/apex/captures/
           retention-days: 30
 
-      - name: Commit the manifest back to this branch
+      - name: Commit the manifest and parsed digest back to this branch
         if: always()
         run: |
           git config user.name "apex-capture"
           git config user.email "apex-capture@users.noreply.github.com"
-          git add data/apex/captures/manifest.json || true
+          git add data/apex/captures/manifest.json data/apex/captures/parsed.json || true
           if git diff --cached --quiet; then
             echo "no change"
             exit 0

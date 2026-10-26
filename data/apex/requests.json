@@ -1,6 +1,6 @@
 {
  "generated_for": "2026-10-26",
- "note": "OLBG listings for the 15 covered sports plus governing-body schedule, standings and form endpoints for the 2026-10-26/27 slate. Reads only; no prices are copied from governing bodies.",
+ "note": "OLBG listings for the 15 covered sports plus governing-body schedule, standings and form endpoints for the 2026-10-26/27 slate. Reads only; no prices are copied from governing bodies. The official list extends the proven set from data/live_desk/requests.json (2026-10-24 run, 45/47 ok) with the endpoints that failed there replaced by alternates.",
  "requests": [
   {"key": "olbg_hub_golf", "url": "https://www.olbg.com/betting-tips/Golf/5", "sport": "Golf", "kind": "olbg-listing", "note": "OLBG Golf hub (sport id 5)"},
   {"key": "olbg_hub_volleyball", "url": "https://www.olbg.com/betting-tips/Volleyball/21", "sport": "Volleyball", "kind": "olbg-listing", "note": "OLBG Volleyball hub (sport id 21)"},
@@ -21,49 +21,74 @@
   {"key": "nhl_sched_26", "url": "https://api-web.nhle.com/v1/schedule/2026-10-26", "sport": "Ice Hockey", "kind": "official-schedule", "note": "NHL official schedule API, 26 Oct 2026"},
   {"key": "nhl_sched_27", "url": "https://api-web.nhle.com/v1/schedule/2026-10-27", "sport": "Ice Hockey", "kind": "official-schedule", "note": "NHL official schedule API, 27 Oct 2026"},
   {"key": "nhl_standings_now", "url": "https://api-web.nhle.com/v1/standings/now", "sport": "Ice Hockey", "kind": "official-standings", "note": "NHL official standings API"},
+  {"key": "nhl_club_stats", "url": "https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=20262027", "sport": "Ice Hockey", "kind": "official-stats", "note": "NHL stats API team summary 2026-27"},
 
-  {"key": "mlb_sched_ws", "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-25&endDate=2026-10-31&hydrate=team,probablePitcher,decisions", "sport": "Baseball", "kind": "official-schedule", "note": "MLB StatsAPI World Series window"},
-  {"key": "mlb_al_standings", "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103&season=2026&standingsTypes=regularSeason", "sport": "Baseball", "kind": "official-standings", "note": "MLB StatsAPI AL standings"},
-  {"key": "mlb_nl_standings", "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=104&season=2026&standingsTypes=regularSeason", "sport": "Baseball", "kind": "official-standings", "note": "MLB StatsAPI NL standings"},
+  {"key": "mlb_sched_ws", "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-10-25&endDate=2026-11-03&hydrate=team,probablePitcher,decisions", "sport": "Baseball", "kind": "official-schedule", "note": "MLB StatsAPI World Series window"},
+  {"key": "mlb_standings", "url": "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2026", "sport": "Baseball", "kind": "official-standings", "note": "MLB StatsAPI standings both leagues"},
+  {"key": "mlb_hitting", "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2026&group=hitting&stats=season&sportIds=1", "sport": "Baseball", "kind": "official-stats", "note": "MLB team hitting stats"},
+  {"key": "mlb_pitching", "url": "https://statsapi.mlb.com/api/v1/teams/stats?season=2026&group=pitching&stats=season&sportIds=1", "sport": "Baseball", "kind": "official-stats", "note": "MLB team pitching stats"},
 
-  {"key": "nba_scoreboard", "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json", "sport": "Basketball", "kind": "official-schedule", "note": "NBA CDN live scoreboard (today's games)"},
-  {"key": "nba_standings", "url": "https://cdn.nba.com/static/json/staticData/standingsLeagueV2.json", "sport": "Basketball", "kind": "official-standings", "note": "NBA CDN league standings"},
-  {"key": "euroleague_schedule", "url": "https://www.euroleaguebasketball.net/euroleague/schedule/", "sport": "Basketball", "kind": "official-schedule", "note": "EuroLeague official schedule page"},
+  {"key": "nba_scoreboard", "url": "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json", "sport": "Basketball", "kind": "official-schedule", "note": "NBA CDN live scoreboard (403 on first run; retried)"},
+  {"key": "nba_standings", "url": "https://cdn.nba.com/static/json/staticData/standingsLeagueV2.json", "sport": "Basketball", "kind": "official-standings", "note": "NBA CDN league standings (403 on first run; retried)"},
+  {"key": "nba_schedule_v2", "url": "https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_2.json", "sport": "Basketball", "kind": "official-schedule", "note": "NBA CDN schedule part 2 (alternate)"},
+  {"key": "el_sched_r6", "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=6", "sport": "Basketball", "kind": "official-schedule", "note": "EuroLeague API round 6"},
+  {"key": "el_sched_r7", "url": "https://api-live.euroleague.net/v1/schedules?seasonCode=E2026&gameNumber=7", "sport": "Basketball", "kind": "official-schedule", "note": "EuroLeague API round 7"},
+  {"key": "el_standings", "url": "https://api-live.euroleague.net/v1/standings?seasonCode=E2026", "sport": "Basketball", "kind": "official-standings", "note": "EuroLeague API standings"},
 
-  {"key": "atp_current", "url": "https://www.atptour.com/en/scores/current", "sport": "Tennis", "kind": "official-schedule", "note": "ATP current tournaments/results"},
-  {"key": "wta_tournaments", "url": "https://www.wtatennis.com/tournaments", "sport": "Tennis", "kind": "official-schedule", "note": "WTA tournaments page"},
+  {"key": "atp_current", "url": "https://www.atptour.com/en/scores/current", "sport": "Tennis", "kind": "official-schedule", "note": "ATP current tournaments (403 on first run; retried)"},
+  {"key": "wta_scores", "url": "https://www.wtatennis.com/scores", "sport": "Tennis", "kind": "official-schedule", "note": "WTA scores"},
+  {"key": "wta_rankings", "url": "https://www.wtatennis.com/rankings/singles", "sport": "Tennis", "kind": "official-standings", "note": "WTA singles rankings"},
+  {"key": "wta_tournaments", "url": "https://www.wtatennis.com/tournaments", "sport": "Tennis", "kind": "official-schedule", "note": "WTA tournaments"},
 
-  {"key": "icc_matches", "url": "https://www.icc-cricket.com/matches", "sport": "Cricket", "kind": "official-schedule", "note": "ICC live/upcoming matches"},
-  {"key": "ecb_news", "url": "https://www.ecb.co.uk/news", "sport": "Cricket", "kind": "official-news", "note": "ECB news index (England series)"},
+  {"key": "icc_odi", "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/odi", "sport": "Cricket", "kind": "official-standings", "note": "ICC men's ODI team rankings"},
+  {"key": "icc_t20", "url": "https://www.icc-cricket.com/rankings/mens/team-rankings/t20i", "sport": "Cricket", "kind": "official-standings", "note": "ICC men's T20I team rankings"},
+  {"key": "ca_upcoming", "url": "https://www.cricket.com.au/matches?year=2026&isCompleted=0", "sport": "Cricket", "kind": "official-schedule", "note": "Cricket Australia upcoming matches"},
+  {"key": "ecb_news", "url": "https://www.ecb.co.uk/news", "sport": "Cricket", "kind": "official-news", "note": "ECB news index"},
   {"key": "csa_upcoming", "url": "https://cricket.co.za/upcoming/8/", "sport": "Cricket", "kind": "official-schedule", "note": "Cricket SA upcoming fixtures"},
-  {"key": "bcci_news", "url": "https://www.bcci.tv/news", "sport": "Cricket", "kind": "official-news", "note": "BCCI news index (India series)"},
+  {"key": "bcci_news", "url": "https://www.bcci.tv/news", "sport": "Cricket", "kind": "official-news", "note": "BCCI news index"},
 
-  {"key": "pdc_events", "url": "https://www.pdc.tv/events", "sport": "Darts", "kind": "official-schedule", "note": "PDC events calendar (European Championship)"},
+  {"key": "pdc_tournaments", "url": "https://www.pdc.tv/tournaments", "sport": "Darts", "kind": "official-schedule", "note": "PDC tournaments"},
+  {"key": "pdc_oom", "url": "https://www.pdc.tv/order-of-merit", "sport": "Darts", "kind": "official-standings", "note": "PDC Order of Merit"},
+  {"key": "pdc_euro", "url": "https://www.pdc.tv/tournament/european-championship", "sport": "Darts", "kind": "official-schedule", "note": "PDC European Championship"},
   {"key": "pdc_news", "url": "https://www.pdc.tv/news", "sport": "Darts", "kind": "official-news", "note": "PDC news index"},
 
-  {"key": "wst_matches", "url": "https://www.wst.tv/matches/", "sport": "Snooker", "kind": "official-schedule", "note": "World Snooker Tour matches"},
+  {"key": "wst_matches", "url": "https://www.wst.tv/matches/", "sport": "Snooker", "kind": "official-schedule", "note": "WST matches"},
+  {"key": "wst_rankings", "url": "https://www.wst.tv/rankings/", "sport": "Snooker", "kind": "official-standings", "note": "WST rankings"},
+  {"key": "wst_tournaments", "url": "https://www.wst.tv/tournaments", "sport": "Snooker", "kind": "official-schedule", "note": "WST tournaments"},
 
   {"key": "pgatour_leaderboard", "url": "https://www.pgatour.com/leaderboard", "sport": "Golf", "kind": "official-schedule", "note": "PGA Tour current leaderboard"},
-  {"key": "dpworldtour_schedule", "url": "https://www.europeantour.com/dpworld-tour/schedule/", "sport": "Golf", "kind": "official-schedule", "note": "DP World Tour schedule"},
+  {"key": "pga_schedule", "url": "https://www.pgatour.com/schedule", "sport": "Golf", "kind": "official-schedule", "note": "PGA Tour schedule"},
+  {"key": "dpwt_schedule", "url": "https://www.europeantour.com/dpworld-tour/schedule/", "sport": "Golf", "kind": "official-schedule", "note": "DP World Tour schedule"},
 
-  {"key": "f1_racing", "url": "https://www.formula1.com/en/racing/2026", "sport": "Motor Racing", "kind": "official-schedule", "note": "F1 2026 race index"},
-  {"key": "motogp_results", "url": "https://www.motogp.com/en/results", "sport": "Motor Racing", "kind": "official-schedule", "note": "MotoGP results/calendar"},
+  {"key": "f1_calendar", "url": "https://www.formula1.com/en/racing/2026", "sport": "Motor Racing", "kind": "official-schedule", "note": "F1 2026 race index"},
+  {"key": "f1_standings", "url": "https://www.formula1.com/en/results/2026/drivers", "sport": "Motor Racing", "kind": "official-standings", "note": "F1 2026 drivers standings"},
+  {"key": "motogp_calendar", "url": "https://www.motogp.com/en/calendar", "sport": "Motor Racing", "kind": "official-schedule", "note": "MotoGP calendar (results URL 404'd on first run)"},
 
-  {"key": "hbl_schedule", "url": "https://www.opel-hbl.de/de/spieltage/", "sport": "Handball", "kind": "official-schedule", "note": "German Handball Bundesliga matchdays"},
+  {"key": "ehf_calendar", "url": "https://www.eurohandball.com/en/calendar/", "sport": "Handball", "kind": "official-schedule", "note": "EHF calendar"},
   {"key": "lnh_starligue", "url": "https://www.lnh.fr/daikin-starligue/accueil", "sport": "Handball", "kind": "official-schedule", "note": "French LNH Starligue"},
-  {"key": "ehf_champions", "url": "https://www.ehf.eu/mens-home/", "sport": "Handball", "kind": "official-schedule", "note": "EHF men's competitions"},
+  {"key": "hbl_home", "url": "https://www.opel-hbl.de/de/", "sport": "Handball", "kind": "official-schedule", "note": "German HBL homepage (spieltage URL 404'd on first run)"},
+  {"key": "asobal", "url": "https://www.asobal.es/", "sport": "Handball", "kind": "official-schedule", "note": "Liga ASOBAL"},
 
-  {"key": "legavolley_news", "url": "https://www.legavolley.it/?lang=en", "sport": "Volleyball", "kind": "official-news", "note": "Lega Volley (Italy Serie A1)"},
-  {"key": "cev_home", "url": "https://www.cev.eu/", "sport": "Volleyball", "kind": "official-news", "note": "CEV homepage"},
+  {"key": "legavolley_news", "url": "https://www.legavolley.it/?lang=en", "sport": "Volleyball", "kind": "official-news", "note": "Lega Volley Italy"},
+  {"key": "cev_club", "url": "https://www.cev.eu/club/", "sport": "Volleyball", "kind": "official-schedule", "note": "CEV club competitions"},
+  {"key": "volleyballworld", "url": "https://en.volleyballworld.com/volleyball/competitions/", "sport": "Volleyball", "kind": "official-schedule", "note": "Volleyball World competitions"},
+  {"key": "plusliga", "url": "https://www.plusliga.pl/", "sport": "Volleyball", "kind": "official-schedule", "note": "Polish PlusLiga"},
 
-  {"key": "prem_fixtures", "url": "https://www.premrugby.com/competitions/gallagher-prem/fixtures-results", "sport": "Rugby Union", "kind": "official-schedule", "note": "Gallagher Premiership fixtures/results"},
-  {"key": "urc_fixtures", "url": "https://www.urcrugby.com/fixtures", "sport": "Rugby Union", "kind": "official-schedule", "note": "United Rugby Championship fixtures"},
+  {"key": "prem_fixtures", "url": "https://www.premrugby.com/fixtures", "sport": "Rugby Union", "kind": "official-schedule", "note": "Premiership fixtures"},
+  {"key": "prem_table", "url": "https://www.premrugby.com/table", "sport": "Rugby Union", "kind": "official-standings", "note": "Premiership table"},
+  {"key": "urc_matchcentre", "url": "https://www.unitedrugby.com/match-centre", "sport": "Rugby Union", "kind": "official-schedule", "note": "URC match centre"},
   {"key": "top14_cal", "url": "https://top14.lnr.fr/calendrier-et-resultats", "sport": "Rugby Union", "kind": "official-schedule", "note": "Top 14 calendar/results"},
 
-  {"key": "nrl_draw", "url": "https://www.nrl.com/draw/", "sport": "Rugby League", "kind": "official-schedule", "note": "NRL draw"},
-  {"key": "superleague", "url": "https://www.superleague.co.uk/fixtures", "sport": "Rugby League", "kind": "official-schedule", "note": "Super League fixtures"},
+  {"key": "rlwc_fixtures", "url": "https://www.rlwc2026.com/fixtures", "sport": "Rugby League", "kind": "official-schedule", "note": "RLWC 2026 fixtures"},
+  {"key": "nrl_draw", "url": "https://www.nrl.com/draw/", "sport": "Rugby League", "kind": "official-schedule", "note": "NRL draw (JS shell on first run)"},
+  {"key": "superleague", "url": "https://www.superleague.co.uk/fixtures", "sport": "Rugby League", "kind": "official-schedule", "note": "Super League fixtures (500 on first run; retried)"},
 
-  {"key": "gaa_home", "url": "https://www.gaa.ie/", "sport": "Gaelic Sports", "kind": "official-news", "note": "GAA homepage (All-Ireland finals season)"},
-  {"key": "gbgb_home", "url": "https://www.gbgb.org.uk/", "sport": "Greyhounds", "kind": "official-schedule", "note": "GBGB homepage (racecards)"}
+  {"key": "gaa_fixtures", "url": "https://www.gaa.ie/fixtures-results", "sport": "Gaelic Sports", "kind": "official-schedule", "note": "GAA fixtures/results"},
+  {"key": "gaa_club", "url": "https://www.gaa.ie/fixtures-results?type=club", "sport": "Gaelic Sports", "kind": "official-schedule", "note": "GAA club fixtures"},
+  {"key": "gaa_hurling", "url": "https://www.gaa.ie/hurling/", "sport": "Gaelic Sports", "kind": "official-news", "note": "GAA hurling"},
+
+  {"key": "gbgb_racing", "url": "https://www.gbgb.org.uk/racing/", "sport": "Greyhounds", "kind": "official-schedule", "note": "GBGB racing"},
+  {"key": "gbgb_results", "url": "https://www.gbgb.org.uk/racing/results/", "sport": "Greyhounds", "kind": "official-schedule", "note": "GBGB results"},
+  {"key": "gbgb_open", "url": "https://www.gbgb.org.uk/racing/open-races/", "sport": "Greyhounds", "kind": "official-schedule", "note": "GBGB open races"}
  ]
 }

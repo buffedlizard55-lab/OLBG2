@@ -1,0 +1,62 @@
+name: Apex desk capture
+
+# The authoring sandbox cannot reach OLBG or most governing-body hosts. This job performs the
+# first-hand reads on a GitHub-hosted runner and commits the capture manifest back to the
+# branch that asked for them; the raw bodies travel as a workflow artifact only.
+#
+# A failed read never fails this job: a 403 or a timeout is evidence and is published on the
+# desk's review page.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/apex/requests.json"
+      - "scripts/apex_collect.py"
+      - ".github/workflows/apex-live.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apex-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Capture OLBG listings and official pages
+        run: python scripts/apex_collect.py
+
+      - name: Upload the raw bodies for offline parsing
+        uses: actions/upload-artifact@v4
+        with:
+          name: apex-captures
+          path: data/apex/captures/
+          retention-days: 30
+
+      - name: Commit the manifest back to this branch
+        if: always()
+        run: |
+          git config user.name "apex-capture"
+          git config user.email "apex-capture@users.noreply.github.com"
+          git add data/apex/captures/manifest.json || true
+          if git diff --cached --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "apex: capture manifest $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            sleep 5
+          done
